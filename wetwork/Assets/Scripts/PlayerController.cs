@@ -5,8 +5,14 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+    private Rigidbody2D rb;
     private float movementX;
     private float movementY;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     void OnMove(InputValue movementValue)
     {
@@ -18,6 +24,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, movementY);
-        this.transform.position = this.transform.position + (movement * speed * Time.deltaTime);
+        rb.linearVelocity = movement * speed;
     }
 }
