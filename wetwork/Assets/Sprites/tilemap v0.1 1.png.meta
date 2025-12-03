@@ -131,8 +131,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: 2, y: -15}
+        - {x: 16, y: -8}
+        - {x: 16, y: 9}
+        - {x: 2, y: 16}
+        - {x: -2, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -8}
+        - {x: -2, y: -15}
+      tessellationDetail: 0
       bones: []
       spriteID: cefd0675d6620f720800000000000000
       internalID: 2877842412949004268
@@ -153,8 +161,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: 16, y: 9}
+        - {x: 2, y: 16}
+        - {x: -2, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -9}
+        - {x: -2, y: -15}
+        - {x: 2, y: -15}
+      tessellationDetail: 0
       bones: []
       spriteID: d3e17a457c4f27900800000000000000
       internalID: 680875630642273853
@@ -175,8 +191,16 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
-      tessellationDetail: -1
+      physicsShape:
+      - - {x: 15, y: -9}
+        - {x: 15, y: 9}
+        - {x: 2, y: 16}
+        - {x: -2, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -8}
+        - {x: -2, y: -15}
+        - {x: 2, y: -15}
+      tessellationDetail: 0
       bones: []
       spriteID: 071dcf60a0d9cfb80800000000000000
       internalID: -8359634141914017424
@@ -197,7 +221,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: 16, y: 9}
+        - {x: 2, y: 16}
+        - {x: -2, y: 16}
+        - {x: -16, y: 9}
+        - {x: -16, y: -9}
+        - {x: -2, y: -15}
+        - {x: 2, y: -15}
       tessellationDetail: 0
       bones: []
       spriteID: c6afcb8567702ed4d9b1c65d543f7844
