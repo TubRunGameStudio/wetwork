@@ -122,10 +122,10 @@ TextureImporter:
       name: tilemap v0.1 1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 95
-        width: 34
-        height: 33
+        x: 2
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
       pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: tilemap v0.1 1_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 95
-        width: 34
-        height: 33
+        x: 48
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
       pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: tilemap v0.1 1_2
       rect:
         serializedVersion: 2
-        x: 95
-        y: 95
-        width: 33
-        height: 33
+        x: 96
+        y: 96
+        width: 32
+        height: 32
       alignment: 9
       pivot: {x: 0.5, y: 0.75}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,6 +180,28 @@ TextureImporter:
       bones: []
       spriteID: 071dcf60a0d9cfb80800000000000000
       internalID: -8359634141914017424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemap v0.1 1_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 57
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.75}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6afcb8567702ed4d9b1c65d543f7844
+      internalID: -2087889578
       vertices: []
       indices: 
       edges: []
@@ -196,11 +218,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       tilemap v0.1 1_0: 2877842412949004268
       tilemap v0.1 1_1: 680875630642273853
       tilemap v0.1 1_2: -8359634141914017424
+      tilemap v0.1 1_3: -2087889578
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
