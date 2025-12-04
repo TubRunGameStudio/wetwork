@@ -5,7 +5,7 @@ public class SpikeTrap : MonoBehaviour
     [SerializeField] int damage;
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController player = other.GetComponent<PlayerController>();
 
