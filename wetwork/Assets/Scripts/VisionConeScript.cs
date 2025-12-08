@@ -17,4 +17,13 @@ public class VisionConeScript : MonoBehaviour
     {
         rotator.Rotate(eulers);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController player = other.GetComponent<PlayerController>();
+
+        if (player == null) return;
+
+        Debug.Log("Player entered vision cone");
+    }
 }
