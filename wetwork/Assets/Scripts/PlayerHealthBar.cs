@@ -10,11 +10,6 @@ public class PlayerHealthBar : MonoBehaviour
     private int health;
     private HorizontalLayoutGroup group;
 
-
-    private void Awake()
-    {
-        group = GetComponent<HorizontalLayoutGroup>();
-    }
     public void setHealth(int playerHealth)
     {
         health = playerHealth;
@@ -23,7 +18,10 @@ public class PlayerHealthBar : MonoBehaviour
 
     private void UpdateHealth()
     {
-        foreach(Transform child in transform)
+        if(group == null)
+            group = GetComponent<HorizontalLayoutGroup>();
+
+        foreach (Transform child in transform)
         {
             Destroy(child.gameObject);
         }
