@@ -1371,7 +1371,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000009b82496bb1c6cd8a0506aeed
+  m_ApplyToSortingLayers: 000000009b82496bb1c6cd8a0506aeed13991d25
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -42853,6 +42853,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 364188262639272890, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 364188262639272890, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759514285683514083, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1759514285683514083, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662520006992953637, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662520006992953637, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
     - target: {fileID: 2692108648152261521, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.15
@@ -42893,9 +42917,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2833701417360449930, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2833701417360449930, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
     - target: {fileID: 3735332556185122691, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730361500841880444, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730361500841880444, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
+    - target: {fileID: 6887409050329304782, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6887409050329304782, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 622696723
+      objectReference: {fileID: 0}
+    - target: {fileID: 9012217793963943197, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -50,5 +50,8 @@ TagManager:
   - name: Minimap
     uniqueID: 2328741553
     locked: 0
+  - name: enemy paths
+    uniqueID: 622696723
+    locked: 0
   m_RenderingLayers:
   - Default
