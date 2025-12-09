@@ -857,3 +857,9 @@ MonoBehaviour:
   - {fileID: 1273064143190586157}
   - {fileID: 9070295036217177795}
   - {fileID: 4201092678160515710}
+  animator: {fileID: 6467405296288057400}
+--- !u!95 &6467405296288057400 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4774783607330646828, guid: ef61da8a689f1434098ff2f316b878a5, type: 3}
+  m_PrefabInstance: {fileID: 1982611593765577492}
+  m_PrefabAsset: {fileID: 0}
