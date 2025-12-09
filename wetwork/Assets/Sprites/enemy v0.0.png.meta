@@ -116,12 +116,12 @@ TextureImporter:
       name: enemy v0.0_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 26
-        height: 44
-      alignment: 9
-      pivot: {x: 0.5, y: 0.10710742}
+        x: 1
+        y: 1
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -130,6 +130,72 @@ TextureImporter:
       bones: []
       spriteID: 8739eca4975e3dc30800000000000000
       internalID: 4383099171470480248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy v0.0_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1
+        width: 27
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03362d7769d5f2945b493fa3894b45fd
+      internalID: 1297389895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy v0.0_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 21
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d8dc09ae9153546b6fc8c2cd3742bf
+      internalID: 249032418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy v0.0_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1
+        width: 26
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46588091fd44fd04daa0e22b382c6a1c
+      internalID: 436399481
       vertices: []
       indices: 
       edges: []
@@ -146,9 +212,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       enemy v0.0_0: 4383099171470480248
+      enemy v0.0_1: 1297389895
+      enemy v0.0_2: 249032418
+      enemy v0.0_3: 436399481
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
