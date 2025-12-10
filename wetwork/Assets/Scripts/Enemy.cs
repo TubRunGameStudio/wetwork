@@ -1,12 +1,14 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering.Universal.Internal;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] List<GameObject> path;
+    [SerializeField] private List<GameObject> path;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject alert;
 
     private NavMeshAgent agent;
     private GameObject destination;
@@ -38,6 +40,7 @@ public class Enemy : MonoBehaviour
                     else index++;
 
                     destination = path[index];
+                    alert.SetActive(false);
                 }
             }
         }
@@ -72,6 +75,7 @@ public class Enemy : MonoBehaviour
 
     public void SetDestination(GameObject des)
     {
+        alert.SetActive(true);
         destination = des;
     }
 }
