@@ -69,4 +69,9 @@ public class Enemy : MonoBehaviour
     {
         return destination;
     }
+
+    public void SetDestination(GameObject des)
+    {
+        destination = des;
+    }
 }

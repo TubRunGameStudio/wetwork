@@ -34,6 +34,6 @@ public class VisionConeScript : MonoBehaviour
 
         if (player == null) return;
 
-        Debug.Log("Player entered vision cone");
+        enemy.SetDestination(player.gameObject);
     }
 }
