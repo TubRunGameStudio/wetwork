@@ -64,4 +64,9 @@ public class Enemy : MonoBehaviour
             animator.SetInteger("Direction", 4);
 
     }
+
+    public GameObject GetDestination()
+    {
+        return destination;
+    }
 }
