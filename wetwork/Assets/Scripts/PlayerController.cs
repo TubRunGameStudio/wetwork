@@ -44,6 +44,12 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("North", true);
         else if (movementY < 0)
             animator.SetBool("North", false);
+
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (movementX > 0)
+            sprite.flipX = false;
+        else if (movementX < 0)
+            sprite.flipX = true;
     }
 
     public void Heal(int heal)
