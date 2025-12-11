@@ -34,10 +34,16 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, movementY);
         rb.linearVelocity = movement * speed;
+
         if (rb.linearVelocity.magnitude > 0)
             animator.SetBool("Walking", true);
         else
             animator.SetBool("Walking", false);
+
+        if (movementY > 0)
+            animator.SetBool("North", true);
+        else if (movementY < 0)
+            animator.SetBool("North", false);
     }
 
     public void Heal(int heal)
