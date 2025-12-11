@@ -1695,6 +1695,7 @@ GameObject:
   - component: {fileID: 1344505185}
   - component: {fileID: 1344505186}
   - component: {fileID: 1344505187}
+  - component: {fileID: 1344505188}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -1821,6 +1822,7 @@ MonoBehaviour:
   speed: 3
   maxHealth: 3
   healthBar: {fileID: 2112777780}
+  animator: {fileID: 1344505188}
 --- !u!61 &1344505186
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1894,6 +1896,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1344505188
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344505180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 013d98e3ddce24347bd4ad4bb0929826, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1550776731
 PrefabInstance:
   m_ObjectHideFlags: 0

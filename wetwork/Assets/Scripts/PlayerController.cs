@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth;
     [SerializeField] PlayerHealthBar healthBar;
+    [SerializeField] Animator animator;
 
     private Rigidbody2D rb;
     private float movementX;
@@ -33,6 +34,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 movement = new Vector3(movementX, movementY);
         rb.linearVelocity = movement * speed;
+        if (rb.linearVelocity.magnitude > 0)
+            animator.SetBool("Walking", true);
+        else
+            animator.SetBool("Walking", false);
     }
 
     public void Heal(int heal)
