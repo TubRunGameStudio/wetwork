@@ -5,6 +5,8 @@ using UnityEngine.Rendering;
 public class FieldOfView : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
+    [SerializeField] Enemy self;
+
     private Mesh mesh;
     private Vector3 origin;
     private float startingAngle;
@@ -46,6 +48,7 @@ public class FieldOfView : MonoBehaviour
             {
                 // Hit
                 vertex = raycastHit2D.point;
+                
             }
             vertices[vertexIndex] = vertex;
 
@@ -69,6 +72,13 @@ public class FieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+
+        // Draw the 2d polygon collider
+        PolygonCollider2D poly2d = GetComponent<PolygonCollider2D>();
+        Vector2[] points = new Vector2[vertices.Length];
+        for (int i = 0; i < vertices.Length; i++)
+            points[i] = new Vector2(vertices[i].x, vertices[i].y);
+        poly2d.points = points;
     }
 
     private static Vector3 GetVectorFromAngle(float angle)
@@ -99,4 +109,12 @@ public class FieldOfView : MonoBehaviour
         startingAngle = GetAngleFromVectorFloat(aimDirection) + fov / 2f;
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        PlayerController player = other.GetComponent<PlayerController>();
+
+        if (player == null) return;
+
+        self.SetDestination(player.gameObject);
+    }
 }
