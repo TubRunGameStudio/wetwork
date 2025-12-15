@@ -21,7 +21,7 @@ public class FieldOfView : MonoBehaviour
     void LateUpdate()
     {
         transform.position = Vector3.zero;
-        int rayCount = 50;
+        int rayCount = 25;
         float angle = startingAngle;
         float angleIncrease = fov / rayCount;
         float viewDistance = 5f;
