@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private List<GameObject> path;
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject alert;
+    [SerializeField] private FieldOfView fov;
 
     private NavMeshAgent agent;
     private GameObject destination;
@@ -46,6 +47,9 @@ public class Enemy : MonoBehaviour
         }
 
         agent.SetDestination(destination.transform.position);
+        fov.SetOrigin(transform.position);
+        Vector3 diff = transform.position - prevPos;
+        fov.SetAimDirection(diff);
 
         // animations
         SetAnimation(transform.position, prevPos);
