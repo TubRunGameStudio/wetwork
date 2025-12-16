@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
-    [SerializeField] GameObject projectilePrefab;
 
     private List<Weapon> weapons;
 
@@ -16,19 +16,16 @@ public class PlayerInventory : MonoBehaviour
     public void Start()
     {
         weapons = new List<Weapon>();
-        weapons.Add(new Camera());
+        weapons.Add(new CCTV());
         UpdateText("0");
     }
 
-    public void Fire()
+    public void Fire(InputAction.CallbackContext ctx)
     {
         if (weapons[0].HasAmmo())
         {
-            int ammo = weapons[0].Fire();
+            int ammo = weapons[0].Fire(ctx);
             UpdateText(ammo.ToString());
-
-            GameObject projectile = GameObject.Instantiate(projectilePrefab);
-            projectile.transform.position = transform.position;
         }
     }
 

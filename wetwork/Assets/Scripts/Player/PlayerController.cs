@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] PlayerHealthBar healthBar;
     [SerializeField] Animator animator;
     [SerializeField] PlayerInventory inventory;
+    [SerializeField] InputActionReference fire;
 
     private Rigidbody2D rb;
     private float movementX;
@@ -32,9 +33,19 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y * .9f;
     }
 
-    void OnAttack(InputValue val)
+    void OnEnable()
     {
-        inventory.Fire();
+        fire.action.started += Fire;
+    }
+
+    private void OnDisable()
+    {
+        fire.action.started -= Fire;
+    }
+
+    private void Fire(InputAction.CallbackContext ctx)
+    {
+        inventory.Fire(ctx);
     }
 
     private void FixedUpdate()

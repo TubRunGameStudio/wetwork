@@ -11,7 +11,7 @@ public class CameraPickup : MonoBehaviour
 
         if (player == null) return;
 
-        player.Pickup(Camera.NAME, 5);
+        player.Pickup(CCTV.NAME, 5);
         Destroy(gameObject);
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public abstract class Weapon
 {
@@ -6,7 +7,7 @@ public abstract class Weapon
     protected int maxAmmo = 99;
     public abstract string name { get; }
 
-    public abstract int Fire();
+    public abstract int Fire(InputAction.CallbackContext ctx);
 
     public bool HasAmmo()
     {
