@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject alert;
     [SerializeField] private FieldOfView fov;
+    [SerializeField] private float speed;
 
     private NavMeshAgent agent;
     private GameObject destination;
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
                     else index++;
 
                     destination = path[index];
+                    agent.speed = speed;
                     alert.SetActive(false);
                 }
             }
@@ -81,6 +83,7 @@ public class Enemy : MonoBehaviour
     {
         alert.SetActive(true);
         destination = des;
+        agent.speed = speed + 1;
     }
 
 }

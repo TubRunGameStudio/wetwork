@@ -1053,6 +1053,7 @@ MonoBehaviour:
   animator: {fileID: 6467405296288057400}
   alert: {fileID: 7394432940404804076}
   fov: {fileID: 2020670682200212973}
+  speed: 1
 --- !u!95 &6467405296288057400 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4774783607330646828, guid: ef61da8a689f1434098ff2f316b878a5, type: 3}
