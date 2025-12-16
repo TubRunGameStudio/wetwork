@@ -1,9 +1,12 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI text;
+
     private List<Weapon> weapons;
 
 
@@ -15,6 +18,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void Fire()
     {
-        weapons[0].Fire();
+        int ammo = weapons[0].Fire();
+        text.text = ammo.ToString();
     }
 }

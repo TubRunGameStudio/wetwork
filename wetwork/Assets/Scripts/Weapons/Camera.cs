@@ -3,12 +3,11 @@ using UnityEngine;
 public class Camera : Weapon
 {
 
-    public override void Fire()
+    public override int Fire()
     {
-        Debug.Log("Fired the Camera");
-        if (ammo == 0) 
-            return;
-        
-        ammo--;
+        if(ammo > 0)
+            ammo--;
+    
+        return ammo;
     }
 }
