@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -73,5 +74,10 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
 
         healthBar.setHealth(health);
+    }
+
+    public void Pickup(String name, int amount)
+    {
+        inventory.Pickup(name, amount);
     }
 }
