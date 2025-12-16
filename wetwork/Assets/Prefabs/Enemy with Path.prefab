@@ -535,6 +535,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   self: {fileID: 7868462317206236013}
+  material: {fileID: 0}
 --- !u!33 &5022099152817903294
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -568,7 +569,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 7bf77446b65236c41addbb7080f736e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

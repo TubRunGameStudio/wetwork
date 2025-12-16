@@ -6,6 +6,7 @@ public class FieldOfView : MonoBehaviour
 {
     [SerializeField] LayerMask layerMask;
     [SerializeField] Enemy self;
+    [SerializeField] Material material;
 
     private Mesh mesh;
     private Vector3 origin;
