@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] GameObject projectilePrefab;
 
     private List<Weapon> weapons;
 
@@ -21,8 +22,14 @@ public class PlayerInventory : MonoBehaviour
 
     public void Fire()
     {
-        int ammo = weapons[0].Fire();
-        UpdateText(ammo.ToString());
+        if (weapons[0].HasAmmo())
+        {
+            int ammo = weapons[0].Fire();
+            UpdateText(ammo.ToString());
+
+            GameObject projectile = GameObject.Instantiate(projectilePrefab);
+            projectile.transform.position = transform.position;
+        }
     }
 
     public void Pickup(string name, int amount)

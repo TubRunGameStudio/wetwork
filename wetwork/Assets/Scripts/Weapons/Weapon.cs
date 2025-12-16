@@ -8,6 +8,11 @@ public abstract class Weapon
 
     public abstract int Fire();
 
+    public bool HasAmmo()
+    {
+        return ammo > 0;
+    }
+
     public int PickupAmmo(int pickup) 
     {
         ammo += pickup;
