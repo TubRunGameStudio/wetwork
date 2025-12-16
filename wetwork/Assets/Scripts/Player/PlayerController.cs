@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] PlayerHealthBar healthBar;
     [SerializeField] Animator animator;
+    [SerializeField] PlayerInventory inventory;
 
     private Rigidbody2D rb;
     private float movementX;
@@ -28,6 +29,11 @@ public class PlayerController : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x * 1.6f;
         movementY = movementVector.y * .9f;
+    }
+
+    void OnAttack(InputValue val)
+    {
+        inventory.Fire();
     }
 
     private void FixedUpdate()
