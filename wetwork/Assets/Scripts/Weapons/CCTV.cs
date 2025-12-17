@@ -27,6 +27,7 @@ public class CCTV : Weapon
         CCTV_Projectile proj = obj.GetComponent<CCTV_Projectile>();
         proj.transform.position = playerPos;
         proj.Target = vec;
+        proj.Activate();
         ammo--;
     
         return ammo;
