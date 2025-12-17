@@ -18,6 +18,7 @@ public class CCTV : Weapon
         Vector3 vec = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         vec.z = 0;
         proj.transform.position = vec;
+        proj.GetComponent<CCTV_Projectile>().Activate();
 
         ammo--;
     
