@@ -19,6 +19,8 @@ public class FieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
         fov = 60f;
         origin = Vector3.zero;
+
+        GetComponent<MeshRenderer>().sortingLayerName = "Minimap";
     }
 
     void LateUpdate()
