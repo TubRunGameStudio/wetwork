@@ -20,11 +20,11 @@ public class PlayerInventory : MonoBehaviour
         UpdateText("0");
     }
 
-    public void Fire(InputAction.CallbackContext ctx)
+    public void Fire(InputAction.CallbackContext ctx, Vector3 playerPos)
     {
-        if (weapons[0].HasAmmo())
+        if (weapons[0].CanFire())
         {
-            int ammo = weapons[0].Fire(ctx);
+            int ammo = weapons[0].Fire(ctx, playerPos);
             UpdateText(ammo.ToString());
         }
     }

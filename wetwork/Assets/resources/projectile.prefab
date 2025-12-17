@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   cutout: {fileID: 2838776962424694785}
+  speed: 0.5
 --- !u!1 &2838776962424694785
 GameObject:
   m_ObjectHideFlags: 0
