@@ -14,7 +14,7 @@ public class CCTV_Projectile : MonoBehaviour
 
     public void Activate()
     {
-        startPos = transform.position;
+        startPos = transform.position + new Vector3(0, .75f, 0);
         StartCoroutine(ArcMove());
     }
 
