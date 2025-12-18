@@ -4,4 +4,5 @@ using UnityEngine.Tilemaps;
 public class GameController : MonoBehaviour
 {
     [SerializeField] public Tilemap OBSTACLES;
+    [SerializeField] public LayerMask OBSTACLE_LAYERMASK;
 }

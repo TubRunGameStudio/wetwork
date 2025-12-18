@@ -12,16 +12,17 @@ public class CCTV : Weapon
     public override string name { get { return NAME; } }
     public GameObject projectile;
 
-    public override bool CanFire(InputAction.CallbackContext ctx, GameController controller)
+    public override bool CanFire(InputAction.CallbackContext ctx, Vector3 playerPos, GameController controller)
     {
         if (ammo <= 0)
             return false;
 
         Vector3 point = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         point.z = 0;
-        TileBase tile = controller.OBSTACLES.GetTile(controller.OBSTACLES.WorldToCell(point));
+        Vector3 vec = point - playerPos;
+        RaycastHit2D hit = Physics2D.Raycast(playerPos, vec, vec.magnitude, controller.OBSTACLE_LAYERMASK);
 
-        if (tile == null)
+        if (hit.collider == null)
         {
             // No Hit
             return false;

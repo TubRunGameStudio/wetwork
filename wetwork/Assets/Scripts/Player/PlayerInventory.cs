@@ -22,7 +22,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext ctx, Vector3 playerPos, GameController controller)
     {
-        if (weapons[0].CanFire(ctx, controller))
+        if (weapons[0].CanFire(ctx, playerPos, controller))
         {
             int ammo = weapons[0].Fire(ctx, playerPos);
             UpdateText(ammo.ToString());
