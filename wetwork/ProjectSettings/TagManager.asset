@@ -47,14 +47,14 @@ TagManager:
   - name: Objects
     uniqueID: 3987604997
     locked: 0
-  - name: Collider
-    uniqueID: 2328741553
-    locked: 0
   - name: enemy paths
     uniqueID: 622696723
     locked: 0
   - name: Minimap
     uniqueID: 3259866613
+    locked: 0
+  - name: Collider
+    uniqueID: 2328741553
     locked: 0
   - name: Mask
     uniqueID: 3065466967
