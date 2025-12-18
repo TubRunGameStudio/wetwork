@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] GameController controller;
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth;
     [SerializeField] PlayerHealthBar healthBar;
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void Fire(InputAction.CallbackContext ctx)
     {
-        inventory.Fire(ctx, transform.position);
+        inventory.Fire(ctx, transform.position, controller);
     }
 
     private void FixedUpdate()

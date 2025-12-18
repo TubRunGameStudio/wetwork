@@ -1,7 +1,10 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using static UnityEngine.UI.Image;
 
 public class CCTV : Weapon
 {
@@ -9,14 +12,29 @@ public class CCTV : Weapon
     public override string name { get { return NAME; } }
     public GameObject projectile;
 
-    public override bool CanFire()
+    public override bool CanFire(InputAction.CallbackContext ctx, GameController controller)
     {
-        return ammo > 0;
+        if (ammo <= 0)
+            return false;
+
+        Vector3 point = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
+        point.z = 0;
+        TileBase tile = controller.OBSTACLES.GetTile(controller.OBSTACLES.WorldToCell(point));
+
+        if (tile == null)
+        {
+            // No Hit
+            return false;
+        }
+        else
+        {
+            // Hit
+            return true;
+        }
     }
 
     public override int Fire(InputAction.CallbackContext ctx, Vector3 playerPos)
     {
-        
         if (projectile == null)
             projectile = (GameObject)Resources.Load("projectile", typeof(GameObject));
 

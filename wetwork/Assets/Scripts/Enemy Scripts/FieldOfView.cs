@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -42,7 +43,8 @@ public class FieldOfView : MonoBehaviour
         {
             Vector3 vertex;
             RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
-            if(raycastHit2D.collider == null)
+
+            if (raycastHit2D.collider == null)
             {
                 // No Hit
                 vertex = origin + GetVectorFromAngle(angle) * viewDistance;
