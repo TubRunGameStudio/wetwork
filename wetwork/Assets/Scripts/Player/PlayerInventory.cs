@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (weapons[0].CanFire(ctx, playerPos, controller))
         {
-            int ammo = weapons[0].Fire(ctx, playerPos);
+            int ammo = weapons[0].Fire(ctx);
             UpdateText(ammo.ToString());
         }
     }

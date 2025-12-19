@@ -11,6 +11,8 @@ public class CCTV : Weapon
     public const string NAME = "CAMERA";
     public override string name { get { return NAME; } }
     public GameObject projectile;
+    private Vector3 target;
+    private Vector3 origin;
 
     public override bool CanFire(InputAction.CallbackContext ctx, Vector3 playerPos, GameController controller)
     {
@@ -30,22 +32,22 @@ public class CCTV : Weapon
         else
         {
             // Hit
+            target = hit.point;
+            origin = playerPos;
             return true;
         }
     }
 
-    public override int Fire(InputAction.CallbackContext ctx, Vector3 playerPos)
+    public override int Fire(InputAction.CallbackContext ctx)
     {
         if (projectile == null)
             projectile = (GameObject)Resources.Load("projectile", typeof(GameObject));
 
 
         GameObject obj = GameObject.Instantiate(projectile);
-        Vector3 vec = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
-        vec.z = 0;
         CCTV_Projectile proj = obj.GetComponent<CCTV_Projectile>();
-        proj.transform.position = playerPos;
-        proj.Target = vec;
+        proj.transform.position = origin;
+        proj.Target = target;
         proj.Activate();
         ammo--;
     
