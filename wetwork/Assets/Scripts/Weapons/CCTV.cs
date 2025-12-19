@@ -14,13 +14,14 @@ public class CCTV : Weapon
     private Vector3 target;
     private Vector3 origin;
 
-    public override bool CanFire(InputAction.CallbackContext ctx, Vector3 playerPos, GameController controller)
+    public override bool CanFire(InputAction.CallbackContext ctx, GameController controller)
     {
         if (ammo <= 0)
             return false;
 
         Vector3 point = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
         point.z = 0;
+        Vector3 playerPos = controller.player.transform.position;
         Vector3 vec = point - playerPos;
         RaycastHit2D hit = Physics2D.Raycast(playerPos, vec, vec.magnitude, controller.OBSTACLE_LAYERMASK);
 

@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void Fire(InputAction.CallbackContext ctx)
     {
-        inventory.Fire(ctx, transform.position, controller);
+        inventory.Fire(ctx, controller);
     }
 
     private void FixedUpdate()

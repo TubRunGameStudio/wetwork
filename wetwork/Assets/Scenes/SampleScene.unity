@@ -4563,6 +4563,7 @@ MonoBehaviour:
   OBSTACLE_LAYERMASK:
     serializedVersion: 2
     m_Bits: 2048
+  player: {fileID: 1344505185}
 --- !u!4 &542317385
 Transform:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public abstract class Weapon
     public abstract int Fire(InputAction.CallbackContext ctx);
 
     // TODO: Remove playerPos
-    public abstract bool CanFire(InputAction.CallbackContext ctx, Vector3 playerPos, GameController controller);
+    public abstract bool CanFire(InputAction.CallbackContext ctx, GameController controller);
 
     public int PickupAmmo(int pickup) 
     {
