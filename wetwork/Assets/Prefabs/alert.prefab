@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: a37e1f5b723ed704d98812fbcbf7d9ca, type: 3}
       propertyPath: m_SortingLayer
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: a37e1f5b723ed704d98812fbcbf7d9ca, type: 3}
       propertyPath: m_SortingLayerID
-      value: -307362299
+      value: 2034022323
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: a37e1f5b723ed704d98812fbcbf7d9ca, type: 3}
       propertyPath: m_LocalPosition.x

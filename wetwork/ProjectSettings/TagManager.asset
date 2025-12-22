@@ -47,6 +47,9 @@ TagManager:
   - name: Objects
     uniqueID: 3987604997
     locked: 0
+  - name: Shout
+    uniqueID: 2034022323
+    locked: 0
   - name: enemy paths
     uniqueID: 622696723
     locked: 0
