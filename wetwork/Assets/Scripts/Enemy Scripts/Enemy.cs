@@ -13,10 +13,19 @@ public class Enemy : MonoBehaviour
     [SerializeField] private FieldOfView fov;
     [SerializeField] private float speed;
 
+    private enum State
+    {
+        ALERT,
+        CAUTION,
+        NORMAL
+    }
+
     private NavMeshAgent agent;
     private GameObject destination;
     private int index;
     private Vector3 prevPos;
+    private State state;
+    private GameObject lastKnownPosition;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,9 +52,7 @@ public class Enemy : MonoBehaviour
                     else index++;
 
                     destination = path[index];
-                    agent.speed = speed;
-                    alertShout.SetActive(false);
-                    cautionShout.SetActive(false);
+                    ChangeState(State.NORMAL);
                 }
             }
         }
@@ -83,19 +90,39 @@ public class Enemy : MonoBehaviour
 
     public void SetAlert(GameObject des)
     {
-        alertShout.SetActive(true);
-        cautionShout.SetActive(false);
+        ChangeState(State.ALERT);
         destination = des;
-        agent.speed = speed + 1;
     }
 
     public void SetCaution(GameObject des)
     {
-        alertShout.SetActive(false);
-        cautionShout.SetActive(true);
+        ChangeState(State.CAUTION);
 
         // Set player last known position
+        lastKnownPosition = des;
         destination = des;
+    }
+
+    private void ChangeState(State state)
+    {
+        if(state == State.ALERT)
+        {
+            alertShout.SetActive(true);
+            cautionShout.SetActive(false);
+            agent.speed = speed + 1;
+            GameObject.Destroy(lastKnownPosition);
+        } else if(state == State.CAUTION)
+        {
+            alertShout.SetActive(false);
+            cautionShout.SetActive(true);
+        } else
+        {
+            alertShout.SetActive(false);
+            cautionShout.SetActive(false);
+            agent.speed = speed;
+            GameObject.Destroy(lastKnownPosition);
+        }
+            this.state = state;
     }
 
 }
