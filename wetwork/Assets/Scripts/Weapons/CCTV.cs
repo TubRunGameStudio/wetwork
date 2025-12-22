@@ -13,21 +13,24 @@ public class CCTV : Weapon
     public GameObject projectile;
     private Vector3 target;
     private Vector3 origin;
+    private bool canFire;
 
-    public override bool CanFire(InputAction.CallbackContext ctx, GameController controller)
+    public override bool CanFire(Vector2 aim, GameController controller)
     {
         if (ammo <= 0)
             return false;
 
-        Vector3 point = Camera.main.ScreenToWorldPoint(ctx.ReadValue<Vector2>());
+        Vector3 point = aim;
         point.z = 0;
-        Vector3 playerPos = controller.player.transform.position;
+        Vector3 playerPos = controller.PLAYER.transform.position;
         Vector3 vec = point - playerPos;
         RaycastHit2D hit = Physics2D.Raycast(playerPos, vec, vec.magnitude, controller.OBSTACLE_LAYERMASK);
 
         if (hit.collider == null)
         {
             // No Hit
+            canFire = false;
+            controller.RETICULE.SetActive(false);
             return false;
         }
         else
@@ -35,8 +38,16 @@ public class CCTV : Weapon
             // Hit
             target = hit.point;
             origin = playerPos;
+            controller.RETICULE.SetActive(true);
+            controller.RETICULE.transform.position = target;
+            canFire = true;
             return true;
         }
+    }
+
+    public override bool CanFire()
+    {
+        return canFire;
     }
 
     public override int Fire(InputAction.CallbackContext ctx)

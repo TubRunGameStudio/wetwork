@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
         health = maxHealth;
         healthBar.setHealth(health);
+        inventory.controller = controller;
     }
 
     void OnMove(InputValue movementValue)

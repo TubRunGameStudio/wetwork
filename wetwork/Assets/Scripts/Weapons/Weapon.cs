@@ -8,8 +8,8 @@ public abstract class Weapon
     public abstract string name { get; }
 
     public abstract int Fire(InputAction.CallbackContext ctx);
-
-    public abstract bool CanFire(InputAction.CallbackContext ctx, GameController controller);
+    public abstract bool CanFire();
+    public abstract bool CanFire(Vector2 aim, GameController controller);
 
     public int PickupAmmo(int pickup) 
     {
