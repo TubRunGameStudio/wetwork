@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private List<GameObject> path;
     [SerializeField] private Animator animator;
-    [SerializeField] private GameObject alert;
+    [SerializeField] private GameObject alertShout;
+    [SerializeField] private GameObject cautionShout;
     [SerializeField] private FieldOfView fov;
     [SerializeField] private float speed;
 
@@ -43,7 +44,8 @@ public class Enemy : MonoBehaviour
 
                     destination = path[index];
                     agent.speed = speed;
-                    alert.SetActive(false);
+                    alertShout.SetActive(false);
+                    cautionShout.SetActive(false);
                 }
             }
         }
@@ -79,11 +81,21 @@ public class Enemy : MonoBehaviour
         return destination;
     }
 
-    public void SetDestination(GameObject des)
+    public void SetAlert(GameObject des)
     {
-        alert.SetActive(true);
+        alertShout.SetActive(true);
+        cautionShout.SetActive(false);
         destination = des;
         agent.speed = speed + 1;
+    }
+
+    public void SetCaution(GameObject des)
+    {
+        alertShout.SetActive(false);
+        cautionShout.SetActive(true);
+
+        // Set player last known position
+        destination = des;
     }
 
 }

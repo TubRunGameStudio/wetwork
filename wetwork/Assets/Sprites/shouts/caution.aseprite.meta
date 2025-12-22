@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a37e1f5b723ed704d98812fbcbf7d9ca
+guid: 6527286f88e6ea246af9b8dee6f6746c
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -84,7 +84,7 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
-    generateIndividualEvents: 0
+    generateIndividualEvents: 1
     generateSpriteAtlas: 1
   asepriteImporterSettings:
     fileImportMode: 1
@@ -99,10 +99,10 @@ ScriptedImporter:
     generateAnimationClips: 1
     addSortingGroup: 1
     addShadowCasters: 0
-    generateIndividualEvents: 0
+    generateIndividualEvents: 1
     generateSpriteAtlas: 1
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639019959788719744
+  platformSettingsDirtyTick: 639019963298119460
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: alert
+  - name: caution
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 24
       height: 24
-    spriteID: c7da73e6210986848b8d3258eced11f8
+    spriteID: 01ba8e5276aa3c740aacb5cf5a37eb67
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,17 +153,17 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 304479836
+      value0: 4125110927
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: alert
+    name: caution
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: alert
+    - name: caution
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -171,7 +171,7 @@ ScriptedImporter:
         y: 0
         width: 24
         height: 24
-      spriteId: c7da73e6210986848b8d3258eced11f8
+      spriteId: 01ba8e5276aa3c740aacb5cf5a37eb67
     linkedCells: []
     tileCells: []
     tileSetIndex: 0

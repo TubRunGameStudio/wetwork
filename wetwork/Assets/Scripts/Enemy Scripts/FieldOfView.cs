@@ -120,6 +120,17 @@ public class FieldOfView : MonoBehaviour
 
         if (player == null) return;
 
-        self.SetDestination(player.gameObject);
+        self.SetAlert(player.gameObject);
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        PlayerController player = other.GetComponent<PlayerController>();
+
+        if (player == null) return;
+        GameObject lastKnownLocation = new GameObject();
+        lastKnownLocation.transform.position = player.transform.position;
+
+        self.SetCaution(lastKnownLocation);
     }
 }
