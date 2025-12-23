@@ -48,8 +48,8 @@ public class Enemy : MonoBehaviour
             if(timer > 1)
             {
                 PlayerController player = destination.GetComponent<PlayerController>();
-                player.Damage(1);
                 animator.SetBool("Shoot", true);
+                player.Damage(1);
                 timer = 0;
             } else
             {
