@@ -56,6 +56,9 @@ TagManager:
   - name: Minimap
     uniqueID: 3259866613
     locked: 0
+  - name: FieldOfView
+    uniqueID: 1966974815
+    locked: 0
   - name: Collider
     uniqueID: 2328741553
     locked: 0
