@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] PlayerInventory inventory;
     [SerializeField] InputActionReference fire;
+    [SerializeField] GameObject damageFlash;
 
     private Rigidbody2D rb;
     private float movementX;
     private float movementY;
-
     private int health;
+    private bool damageFrame = false;
 
 
     private void Awake()
@@ -53,7 +54,18 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, movementY);
+        // Damage
+        if(damageFrame)
+        {
+            damageFlash.SetActive(true);
+            damageFrame = false;
+        } else
+        {
+            damageFlash.SetActive(false);
+        }
+
+            // Animation
+            Vector3 movement = new Vector3(movementX, movementY);
         rb.linearVelocity = movement * speed;
 
         if (rb.linearVelocity.magnitude > 0)
@@ -88,6 +100,7 @@ public class PlayerController : MonoBehaviour
             controller.EndGame();
 
         healthBar.setHealth(health);
+        damageFrame = true;
     }
 
     public void Pickup(String name, int amount)
