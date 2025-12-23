@@ -49,8 +49,11 @@ public class Enemy : MonoBehaviour
             {
                 PlayerController player = destination.GetComponent<PlayerController>();
                 player.Damage(1);
-                SetShootAnimation();
+                animator.SetBool("Shoot", true);
                 timer = 0;
+            } else
+            {
+                animator.SetBool("Shoot", false);
             }
             agent.isStopped = true;
         }
@@ -118,11 +121,6 @@ public class Enemy : MonoBehaviour
             animator.SetBool("North", false);
         else if (diffY > 0)
             animator.SetBool("North", true);
-    }
-
-    private void SetShootAnimation()
-    {
-        animator.SetBool("Shoot", true);
     }
 
     public GameObject GetDestination()
