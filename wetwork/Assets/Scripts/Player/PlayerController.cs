@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour
 {
@@ -84,7 +85,7 @@ public class PlayerController : MonoBehaviour
     {
         health -= damage;
         if (health <= 0)
-            Destroy(gameObject);
+            controller.EndGame();
 
         healthBar.setHealth(health);
     }

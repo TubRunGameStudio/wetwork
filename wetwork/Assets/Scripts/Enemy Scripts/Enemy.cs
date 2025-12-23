@@ -45,16 +45,21 @@ public class Enemy : MonoBehaviour
         timer += Time.deltaTime;
         if (state == State.ALERT)
         {
-            if(timer > .5)
+            if(timer > 1)
             {
                 PlayerController player = destination.GetComponent<PlayerController>();
                 player.Damage(1);
+                SetShootAnimation();
                 timer = 0;
             }
             agent.isStopped = true;
         }
         else
         {
+            // animations
+            SetWalkAnimation(transform.position, prevPos);
+
+            // behavior
             agent.isStopped = false;
             if (!agent.pathPending)
             {
@@ -68,7 +73,7 @@ public class Enemy : MonoBehaviour
                         else index++;
 
                         destination = path[index];
-                        ChangeState(State.NORMAL);
+                        ChangeState(State.NORMAL, destination);
                     }
                 }
             }
@@ -78,17 +83,17 @@ public class Enemy : MonoBehaviour
             Vector3 diff = transform.position - prevPos;
             fov.SetAimDirection(diff);
 
-            // animations
-            SetAnimation(transform.position, prevPos);
             prevPos = transform.position;
         }
     }
 
-    private void SetAnimation(Vector3 curr, Vector3 prev)
+    private void SetWalkAnimation(Vector3 curr, Vector3 prev)
     {
+        animator.SetBool("Shhot", false);
+        animator.SetBool("Walking", true);
+
         float diffX = curr.x - prev.x;
         float diffY = curr.y - prev.y;
-        animator.SetBool("Walking", true);
 
         if (diffY < 0)
             animator.SetBool("North", false);
@@ -103,27 +108,33 @@ public class Enemy : MonoBehaviour
 
     }
 
+    private void SetAimAnimation()
+    {
+        animator.SetBool("Walking", false);
+
+    }
+
+    private void SetShootAnimation()
+    {
+        animator.SetBool("Shoot", true);
+    }
+
     public GameObject GetDestination()
     {
         return destination;
     }
 
-    public void SetAlert(GameObject des)
+    public void SetAlert(GameObject obj)
     {
-        ChangeState(State.ALERT);
-        destination = des;
+        ChangeState(State.ALERT, obj);
     }
 
-    public void SetCaution(GameObject des)
+    public void SetCaution(GameObject obj)
     {
-        ChangeState(State.CAUTION);
-
-        // Set player last known position
-        lastKnownPosition = des;
-        destination = des;
+        ChangeState(State.CAUTION, obj);
     }
 
-    private void ChangeState(State state)
+    private void ChangeState(State state, GameObject des)
     {
         if(state == State.ALERT)
         {
@@ -132,11 +143,15 @@ public class Enemy : MonoBehaviour
             agent.speed = speed + 1;
             GameObject.Destroy(lastKnownPosition);
             timer = 0;
+            SetAimAnimation();
+            destination = des;
         }
         else if(state == State.CAUTION)
         {
             alertShout.SetActive(false);
             cautionShout.SetActive(true);
+            lastKnownPosition = des;
+            destination = des;
         } else
         {
             alertShout.SetActive(false);
