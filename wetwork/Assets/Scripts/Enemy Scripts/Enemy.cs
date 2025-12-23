@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     private Vector3 prevPos;
     private State state;
     private GameObject lastKnownPosition;
+    private float timer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,35 +37,50 @@ public class Enemy : MonoBehaviour
 
         destination = path[0];
         index = 0;
+        state = State.NORMAL;
     }
 
     private void Update()
     {
-        if (!agent.pathPending)
+        timer += Time.deltaTime;
+        if (state == State.ALERT)
         {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            if(timer > .5)
             {
-                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                Debug.Log("Bang Bang");
+                timer = 0;
+            }
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+            if (!agent.pathPending)
+            {
+                if (agent.remainingDistance <= agent.stoppingDistance)
                 {
-                    // Reached destination
-                    if (index == path.Count - 1)
-                        index = 0;
-                    else index++;
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                    {
+                        // Reached destination
+                        if (index == path.Count - 1)
+                            index = 0;
+                        else index++;
 
-                    destination = path[index];
-                    ChangeState(State.NORMAL);
+                        destination = path[index];
+                        ChangeState(State.NORMAL);
+                    }
                 }
             }
+
+            agent.SetDestination(destination.transform.position);
+            fov.SetOrigin(transform.position);
+            Vector3 diff = transform.position - prevPos;
+            fov.SetAimDirection(diff);
+
+            // animations
+            SetAnimation(transform.position, prevPos);
+            prevPos = transform.position;
         }
-
-        agent.SetDestination(destination.transform.position);
-        fov.SetOrigin(transform.position);
-        Vector3 diff = transform.position - prevPos;
-        fov.SetAimDirection(diff);
-
-        // animations
-        SetAnimation(transform.position, prevPos);
-        prevPos = transform.position;
     }
 
     private void SetAnimation(Vector3 curr, Vector3 prev)
@@ -111,7 +127,9 @@ public class Enemy : MonoBehaviour
             cautionShout.SetActive(false);
             agent.speed = speed + 1;
             GameObject.Destroy(lastKnownPosition);
-        } else if(state == State.CAUTION)
+            timer = 0;
+        }
+        else if(state == State.CAUTION)
         {
             alertShout.SetActive(false);
             cautionShout.SetActive(true);
