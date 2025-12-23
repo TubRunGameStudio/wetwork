@@ -17,8 +17,6 @@ public class CCTV : Weapon
 
     public override bool CanFire(Vector2 aim, GameController controller)
     {
-        if (ammo <= 0)
-            return false;
 
         Vector3 point = aim;
         point.z = 0;
@@ -47,7 +45,7 @@ public class CCTV : Weapon
 
     public override bool CanFire()
     {
-        return canFire;
+        return canFire && ammo > 0;
     }
 
     public override int Fire(InputAction.CallbackContext ctx)
