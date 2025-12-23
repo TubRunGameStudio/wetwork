@@ -204,9 +204,9 @@ TextureImporter:
       name: enemy v0.0_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 97
-        width: 28
+        x: 37
+        y: 98
+        width: 32
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -226,9 +226,9 @@ TextureImporter:
       name: enemy v0.0_5
       rect:
         serializedVersion: 2
-        x: 33
-        y: 97
-        width: 27
+        x: 74
+        y: 98
+        width: 32
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -248,12 +248,12 @@ TextureImporter:
       name: enemy v0.0_6
       rect:
         serializedVersion: 2
-        x: 65
-        y: 97
-        width: 28
+        x: 109
+        y: 98
+        width: 43
         height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.35128695, y: -0.015445709}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -270,9 +270,9 @@ TextureImporter:
       name: enemy v0.0_7
       rect:
         serializedVersion: 2
-        x: 100
-        y: 97
-        width: 27
+        x: 4
+        y: 49
+        width: 26
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -292,7 +292,7 @@ TextureImporter:
       name: enemy v0.0_8
       rect:
         serializedVersion: 2
-        x: 4
+        x: 35
         y: 49
         width: 26
         height: 46
@@ -314,7 +314,7 @@ TextureImporter:
       name: enemy v0.0_9
       rect:
         serializedVersion: 2
-        x: 35
+        x: 67
         y: 49
         width: 26
         height: 46
@@ -336,7 +336,7 @@ TextureImporter:
       name: enemy v0.0_10
       rect:
         serializedVersion: 2
-        x: 67
+        x: 99
         y: 49
         width: 26
         height: 46
@@ -358,12 +358,12 @@ TextureImporter:
       name: enemy v0.0_11
       rect:
         serializedVersion: 2
-        x: 99
-        y: 49
-        width: 26
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 119
+        y: 0
+        width: 45
+        height: 49
+      alignment: 9
+      pivot: {x: 0.626315, y: -0.0072501726}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -380,9 +380,9 @@ TextureImporter:
       name: enemy v0.0_12
       rect:
         serializedVersion: 2
-        x: 7
-        y: 1
-        width: 21
+        x: 32
+        y: 2
+        width: 29
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -402,9 +402,9 @@ TextureImporter:
       name: enemy v0.0_13
       rect:
         serializedVersion: 2
-        x: 39
-        y: 1
-        width: 21
+        x: 71
+        y: 2
+        width: 32
         height: 46
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -416,50 +416,6 @@ TextureImporter:
       bones: []
       spriteID: 4b2ae0511846a0a48962f4c13f83e2cf
       internalID: 798548310
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy v0.0_14
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 1
-        width: 21
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e984b7cc753777478a0df5815d856cc
-      internalID: 925357961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy v0.0_15
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 1
-        width: 21
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ede8c93b7642df944aa74f5cd93402e6
-      internalID: 910390504
       vertices: []
       indices: 
       edges: []
@@ -486,8 +442,6 @@ TextureImporter:
       enemy v0.0_11: -131988600
       enemy v0.0_12: 1427556880
       enemy v0.0_13: 798548310
-      enemy v0.0_14: 925357961
-      enemy v0.0_15: 910390504
       enemy v0.0_2: 249032418
       enemy v0.0_3: 436399481
       enemy v0.0_4: -1276700840

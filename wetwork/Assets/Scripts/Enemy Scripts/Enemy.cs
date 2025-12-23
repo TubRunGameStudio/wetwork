@@ -47,7 +47,8 @@ public class Enemy : MonoBehaviour
         {
             if(timer > .5)
             {
-                Debug.Log("Bang Bang");
+                PlayerController player = destination.GetComponent<PlayerController>();
+                player.Damage(1);
                 timer = 0;
             }
             agent.isStopped = true;
@@ -87,15 +88,18 @@ public class Enemy : MonoBehaviour
     {
         float diffX = curr.x - prev.x;
         float diffY = curr.y - prev.y;
+        animator.SetBool("Walking", true);
 
-        if (diffX > 0 && diffY < 0)
-            animator.SetInteger("Direction", 1);
-        else if (diffX > 0 && diffY > 0)
-            animator.SetInteger("Direction", 2);
-        else if (diffX < 0 && diffY > 0)
-            animator.SetInteger("Direction", 3);
-        else if (diffX < 0 && diffY < 0)
-            animator.SetInteger("Direction", 4);
+        if (diffY < 0)
+            animator.SetBool("North", false);
+        else if (diffY > 0)
+            animator.SetBool("North", true);
+
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (diffX > 0)
+            sprite.flipX = false;
+        else if (diffX < 0)
+            sprite.flipX = true;
 
     }
 
