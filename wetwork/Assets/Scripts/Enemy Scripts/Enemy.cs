@@ -108,10 +108,16 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void SetAimAnimation()
+    private void SetAimAnimation(Vector3 self, Vector3 target)
     {
         animator.SetBool("Walking", false);
+        float diffX = target.x - self.x;
+        float diffY = target.y - self.y;
 
+        if (diffY < 0)
+            animator.SetBool("North", false);
+        else if (diffY > 0)
+            animator.SetBool("North", true);
     }
 
     private void SetShootAnimation()
@@ -143,7 +149,7 @@ public class Enemy : MonoBehaviour
             agent.speed = speed + 1;
             GameObject.Destroy(lastKnownPosition);
             timer = 0;
-            SetAimAnimation();
+            SetAimAnimation(transform.position, des.transform.position);
             destination = des;
         }
         else if(state == State.CAUTION)
