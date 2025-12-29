@@ -142,10 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a734f337400978b429f91845871e9827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  controller: {fileID: 0}
   speed: 3
   maxHealth: 10
-  healthBar: {fileID: 0}
   animator: {fileID: 161641701502588834}
   inventory: {fileID: 5925307787922443785}
   fire: {fileID: 2222349750370745951, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
@@ -338,7 +336,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1229500329
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -517,8 +515,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -307362299
-  m_SortingLayer: 1
+  m_SortingLayerID: -1710801643
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 11fc12d477ca6fa4682a3bbfaf12ca25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -608,7 +606,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1966225743
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 1
   m_Sprite: {fileID: 2181488224460016125, guid: ca48eeeb9f141bf4a87dcf702d00de1a, type: 3}
   m_Color: {r: 0.2507559, g: 1, b: 0, a: 1}

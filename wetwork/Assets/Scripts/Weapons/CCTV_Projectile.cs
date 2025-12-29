@@ -16,6 +16,7 @@ public class CCTV_Projectile : MonoBehaviour
     {
         startPos = transform.position + new Vector3(0, .75f, 0);
         StartCoroutine(ArcMove());
+        gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Doodads");
     }
 
     IEnumerator ArcMove()
