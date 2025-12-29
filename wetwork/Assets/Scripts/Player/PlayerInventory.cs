@@ -15,14 +15,12 @@ public class PlayerInventory : MonoBehaviour
     public GameController controller;
 
     private List<Weapon> weapons;
-    private bool canFire;
 
 
     public void Awake()
     {
         weapons = new List<Weapon>();
         weapons.Add(new CCTV());
-        canFire = false;
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         text = controller.AMMO_TXT;
         UpdateText("0");
