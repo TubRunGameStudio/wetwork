@@ -3403,22 +3403,22 @@ CompositeCollider2D:
         Y: -5312500
       - X: -14687500
         Y: -5312500
-    - - X: 125111016
-        Y: -24054334
+    - - X: 116673520
+        Y: -17179334
+      - X: 120111016
+        Y: -11866834
       - X: 125111016
         Y: -7491834
+      - X: 121048520
+        Y: -6554334
       - X: 115423520
-        Y: 2195665
+        Y: -5304334
+      - X: 105736016
+        Y: -8116834
+      - X: 113548520
+        Y: -17179334
       - X: 115111016
-        Y: 2195665
-      - X: 105111016
-        Y: -7804334
-      - X: 105111016
-        Y: -24054334
-      - X: 114486016
-        Y: -28741834
-      - X: 117298520
-        Y: -28741834
+        Y: -27491834
     - - X: 117500000
         Y: -37187500
       - X: 118632811
@@ -4314,14 +4314,14 @@ CompositeCollider2D:
       - {x: -1.8529156, y: -0.115834504}
       - {x: -1.7187488, y: -0.2500016}
       - {x: -1.4999872, y: -0.53125}
-    - - {x: 11.729845, y: -2.8741834}
-      - {x: 12.511102, y: -2.4054184}
-      - {x: 12.511094, y: -0.7491758}
-      - {x: 11.542341, y: 0.21956651}
-      - {x: 11.511094, y: 0.21955891}
-      - {x: 10.511102, y: -0.7804442}
-      - {x: 10.511117, y: -2.405441}
-      - {x: 11.448607, y: -2.8741834}
+    - - {x: 11.511059, y: -2.7488997}
+      - {x: 11.667356, y: -1.7179292}
+      - {x: 12.011105, y: -1.1866807}
+      - {x: 12.511036, y: -0.74916834}
+      - {x: 12.104848, y: -0.6554326}
+      - {x: 11.542346, y: -0.5304351}
+      - {x: 10.573634, y: -0.8117217}
+      - {x: 11.354854, y: -1.7179408}
     - - {x: 11.531236, y: -4.03125}
       - {x: 11.750002, y: -3.7187488}
       - {x: 11.863301, y: -3.605496}
@@ -4974,7 +4974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69ece9450fdbc743984404f8ba1bc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  HEALTH_BAR: {fileID: 2112777778}
+  HEALTH_BAR: {fileID: 2112777780}
   AMMO_TXT: {fileID: 598140801}
   OBSTACLES: {fileID: 251760466}
   OBSTACLE_LAYERMASK:
@@ -5180,7 +5180,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000009b82496bb1c6cd8a0506aeed13991d25f59d4dc25750b7b6b3b73c795fa73d75
+  m_ApplyToSortingLayers: 000000009b82496bb1c6cd8a0506aeed13991d25f59d4dc25750b7b6b3b73c795fa73d753f8a5481fd1b4cd8153d079a
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5519,7 +5519,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 04d604dda5cb85b468bd84c1e479e609, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3cb735a6554ea224cbe0f9eed5b78297, type: 2}
 --- !u!1 &1197617826
 GameObject:
   m_ObjectHideFlags: 0
@@ -36428,7 +36428,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1035100683
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -58659,7 +58659,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1966225743
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

@@ -47,6 +47,9 @@ TagManager:
   - name: Objects
     uniqueID: 3987604997
     locked: 0
+  - name: Doodads
+    uniqueID: 2584165653
+    locked: 0
   - name: Shout
     uniqueID: 2034022323
     locked: 0

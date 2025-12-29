@@ -10,7 +10,7 @@ public class PlayerHealthBar : MonoBehaviour
     private int health;
     private HorizontalLayoutGroup group;
 
-    public void setHealth(int playerHealth)
+    public void SetHealth(int playerHealth)
     {
         health = playerHealth;
         UpdateHealth();

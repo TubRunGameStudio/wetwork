@@ -960,7 +960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69ece9450fdbc743984404f8ba1bc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  HEALTH_BAR: {fileID: 2112777778}
+  HEALTH_BAR: {fileID: 2112777780}
   AMMO_TXT: {fileID: 598140801}
   OBSTACLES: {fileID: 251760466}
   OBSTACLE_LAYERMASK:
@@ -3782,7 +3782,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1035100683
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5264,7 +5264,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1966225743
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

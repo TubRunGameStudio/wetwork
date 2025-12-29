@@ -1,10 +1,13 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController PLAYER { get; private set; }
+
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth;
     [SerializeField] Animator animator;
@@ -24,13 +27,20 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        if (PLAYER != null && PLAYER != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            PLAYER = this;
+        }
+
+        DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
-        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        healthBar = controller.HEALTH_BAR.GetComponent<PlayerHealthBar>();
 
         health = maxHealth;
-        healthBar.setHealth(health);
-        inventory.controller = controller;
+
     }
 
     void OnMove(InputValue movementValue)
@@ -94,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if (health > maxHealth)
             health = maxHealth;
 
-        healthBar.setHealth(health);
+        healthBar.SetHealth(health);
     }
     public void Damage(int damage)
     {
@@ -102,12 +112,22 @@ public class PlayerController : MonoBehaviour
         if (health <= 0)
             controller.EndGame();
 
-        healthBar.setHealth(health);
+        healthBar.SetHealth(health);
         damageFrame = true;
     }
 
     public void Pickup(String name, int amount)
     {
         inventory.Pickup(name, amount);
+    }
+
+    public void Initiate(GameController controller)
+    {
+        this.controller = controller;
+        healthBar = controller.HEALTH_BAR;
+        healthBar.SetHealth(health);
+
+        inventory.controller = controller;
+        inventory.Initiate();
     }
 }

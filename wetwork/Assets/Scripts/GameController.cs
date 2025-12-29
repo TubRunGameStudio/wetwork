@@ -4,7 +4,7 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] public GameObject HEALTH_BAR;
+    [SerializeField] public PlayerHealthBar HEALTH_BAR;
     [SerializeField] public TextMeshProUGUI AMMO_TXT;
     [SerializeField] public Tilemap OBSTACLES;
     [SerializeField] public LayerMask OBSTACLE_LAYERMASK;
@@ -21,10 +21,10 @@ public class GameController : MonoBehaviour
     {
         spawnPosition = new Vector3(0, 0, 0);
 
-        if (GameObject.FindGameObjectWithTag("Player") != null)
+        if (PlayerController.PLAYER != null)
         {
             //player already exists, so just move it to the spawn location and set the Player gameobject parameter
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = PlayerController.PLAYER.gameObject;
             player.transform.position = spawnPosition;
 
         }
@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
             player.transform.position = spawnPosition;
         }
         PLAYER = player.GetComponent<PlayerController>();
+        PLAYER.Initiate(this);
         RETICULE = PLAYER.reticule;
 
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();

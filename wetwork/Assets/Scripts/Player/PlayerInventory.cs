@@ -22,14 +22,22 @@ public class PlayerInventory : MonoBehaviour
         weapons = new List<Weapon>();
         weapons.Add(new CCTV());
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-        text = controller.AMMO_TXT;
-        UpdateText("0");
     }
 
     public void FixedUpdate()
     {
         Vector2 aimPos = Camera.main.ScreenToWorldPoint(aim.action.ReadValue<Vector2>());
         weapons[0].CanFire(aimPos, controller);
+    }
+
+    public void Initiate()
+    {
+        text = controller.AMMO_TXT;
+
+        // TODO: update for multiple weapons
+        // Update ammo text
+        int ammo = weapons[0].PickupAmmo(0);
+        UpdateText(ammo.ToString());
     }
 
     public void Fire(InputAction.CallbackContext ctx, GameController controller)
