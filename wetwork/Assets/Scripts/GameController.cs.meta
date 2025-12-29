@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: b69ece9450fdbc743984404f8ba1bc5a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - OBSTACLES: {instanceID: 0}
+  - PLAYER: {instanceID: 0}
+  - RETICULE: {instanceID: 0}
+  - GAMEOVER: {instanceID: 0}
+  - player: {instanceID: 0}
+  - playerPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

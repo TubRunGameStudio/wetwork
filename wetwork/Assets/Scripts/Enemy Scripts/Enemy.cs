@@ -92,7 +92,6 @@ public class Enemy : MonoBehaviour
 
     private void SetWalkAnimation(Vector3 curr, Vector3 prev)
     {
-        animator.SetBool("Shhot", false);
         animator.SetBool("Walking", true);
 
         float diffX = curr.x - prev.x;

@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    [SerializeField] private GameObject player;
+    private GameObject player;
+
+    public void SetPlayer(GameObject player)
+    {
+        this.player = player;
+    }
 
     public void FixedUpdate()
     {

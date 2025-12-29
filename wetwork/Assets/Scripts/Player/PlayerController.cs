@@ -5,15 +5,16 @@ using UnityEngine.InputSystem.XR;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] GameController controller;
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth;
-    [SerializeField] PlayerHealthBar healthBar;
     [SerializeField] Animator animator;
     [SerializeField] PlayerInventory inventory;
     [SerializeField] InputActionReference fire;
     [SerializeField] GameObject damageFlash;
+    [SerializeField] public GameObject reticule;
 
+    private GameController controller;
+    private PlayerHealthBar healthBar;
     private Rigidbody2D rb;
     private float movementX;
     private float movementY;
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        healthBar = controller.HEALTH_BAR.GetComponent<PlayerHealthBar>();
 
         health = maxHealth;
         healthBar.setHealth(health);

@@ -18,11 +18,13 @@ public class PlayerInventory : MonoBehaviour
     private bool canFire;
 
 
-    public void Start()
+    public void Awake()
     {
         weapons = new List<Weapon>();
         weapons.Add(new CCTV());
         canFire = false;
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        text = controller.AMMO_TXT;
         UpdateText("0");
     }
 
