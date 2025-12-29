@@ -285,7 +285,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f3a5c670345d3d4fa47eec3575986e2, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -308,7 +308,7 @@ TilemapRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0.25, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.2265625, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 3
@@ -971,7 +971,7 @@ MonoBehaviour:
   GAMEOVER: {fileID: 778987340}
   mainCamera: {fileID: 0}
   player: {fileID: 0}
-  playerPrefab: {fileID: 3046576089651197680, guid: 278c6833c6acd5f41a04fbca5eb480f3, type: 3}
+  playerPrefab: {fileID: 3046576089651197680, guid: d243c8125f1adaa44bcef0af59cfffc5, type: 3}
   spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &542317385
 Transform:
@@ -1665,7 +1665,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d6aa62829c7a8244ab721e0c68078753, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3762,7 +3762,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f3a5c670345d3d4fa47eec3575986e2, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5244,7 +5244,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f3a5c670345d3d4fa47eec3575986e2, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5922,7 +5922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b573e49f0b2f2847a7d822e931e2397, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  heart: {fileID: 7751856255214540391, guid: ccc64d985f77bca4f87070a54faa2b4b, type: 3}
+  heart: {fileID: 7751856255214540391, guid: 70894bbbe96fa62419c0f6a4d3e683c2, type: 3}
 --- !u!114 &2112777781
 MonoBehaviour:
   m_ObjectHideFlags: 0
