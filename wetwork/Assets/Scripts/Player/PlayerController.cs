@@ -35,9 +35,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             PLAYER = this;
-            PlayerState.InitGame(maxHealth, new List<Weapon>(), transform.position);
-            PlayerState.Weapons.Add(new CCTV());
-
+            PlayerState.InitGame(maxHealth, new List<Weapon>());
         }
 
         DontDestroyOnLoad(gameObject);

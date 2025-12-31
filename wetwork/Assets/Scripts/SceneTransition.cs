@@ -33,6 +33,7 @@ public class SceneTransition : MonoBehaviour, Interactable
 
     public void Interact()
     {
+        PlayerState.PlayerReturnPosition = transform.position;
         SceneManager.LoadScene(sceneTransitionName, LoadSceneMode.Single);
     }
 }

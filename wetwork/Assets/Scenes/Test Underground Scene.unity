@@ -1835,7 +1835,6 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   player: {fileID: 0}
   playerPrefab: {fileID: 3046576089651197680, guid: d243c8125f1adaa44bcef0af59cfffc5, type: 3}
-  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &542317385
 Transform:
   m_ObjectHideFlags: 0
@@ -2392,11 +2391,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.645
+      value: -0.441
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.385
+      value: -0.498
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.z

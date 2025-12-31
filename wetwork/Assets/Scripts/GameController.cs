@@ -15,25 +15,22 @@ public class GameController : MonoBehaviour
     public CameraScript mainCamera;
     public GameObject player;
     public GameObject playerPrefab;
-    public Vector3 spawnPosition;
 
     void Awake()
     {
-        spawnPosition = new Vector3(0, 0, 0);
 
         if (PlayerController.PLAYER != null)
         {
             // player already exists, so just move it to the spawn location and set the Player gameobject parameter
             player = PlayerController.PLAYER.gameObject;
-            player.transform.position = spawnPosition;
-
         }
         else
         {
             //instantiate the player
             player = Instantiate(playerPrefab);
-            player.transform.position = spawnPosition;
         }
+        player.transform.position = PlayerState.PlayerLoadPosition;
+        PlayerState.PlayerLoadPosition = PlayerState.PlayerReturnPosition;
         PLAYER = player.GetComponent<PlayerController>();
         PLAYER.Initiate(this);
         RETICULE = PLAYER.reticule;

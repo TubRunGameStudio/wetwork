@@ -4986,7 +4986,6 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   player: {fileID: 0}
   playerPrefab: {fileID: 3046576089651197680, guid: d243c8125f1adaa44bcef0af59cfffc5, type: 3}
-  spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &542317385
 Transform:
   m_ObjectHideFlags: 0
@@ -71085,6 +71084,22 @@ PrefabInstance:
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567909596762000699, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3567909596762000699, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956591962065756347, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048813326519223124, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7815028559624325366, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: sceneTransitionName
