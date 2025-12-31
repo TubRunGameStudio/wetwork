@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -21,9 +22,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float movementX;
     private float movementY;
-    private int health;
     private bool damageFrame = false;
-
 
     private void Awake()
     {
@@ -34,12 +33,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             PLAYER = this;
+            PlayerState.InitGame(maxHealth, new List<Weapon>(), transform.position);
+            PlayerState.Weapons.Add(new CCTV());
+
         }
 
         DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
 
-        health = maxHealth;
 
     }
 
@@ -100,19 +101,19 @@ public class PlayerController : MonoBehaviour
 
     public void Heal(int heal)
     {
-        health += heal;
-        if (health > maxHealth)
-            health = maxHealth;
+        PlayerState.Health += heal;
+        if (PlayerState.Health > maxHealth)
+            PlayerState.Health = maxHealth;
 
-        healthBar.SetHealth(health);
+        healthBar.SetHealth(PlayerState.Health);
     }
     public void Damage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        PlayerState.Health -= damage;
+        if (PlayerState.Health <= 0)
             controller.EndGame();
 
-        healthBar.SetHealth(health);
+        healthBar.SetHealth(PlayerState.Health);
         damageFrame = true;
     }
 
@@ -125,7 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         this.controller = controller;
         healthBar = controller.HEALTH_BAR;
-        healthBar.SetHealth(health);
+        healthBar.SetHealth(PlayerState.Health);
 
         inventory.controller = controller;
         inventory.Initiate();

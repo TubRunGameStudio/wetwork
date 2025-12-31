@@ -14,44 +14,42 @@ public class PlayerInventory : MonoBehaviour
     
     public GameController controller;
 
-    private List<Weapon> weapons;
-
 
     public void Awake()
     {
-        weapons = new List<Weapon>();
-        weapons.Add(new CCTV());
+        PlayerState.Weapons = new List<Weapon>();
+        PlayerState.Weapons.Add(new CCTV());
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
     }
 
     public void FixedUpdate()
     {
         Vector2 aimPos = Camera.main.ScreenToWorldPoint(aim.action.ReadValue<Vector2>());
-        weapons[0].CanFire(aimPos, controller);
+        PlayerState.Weapons[0].CanFire(aimPos, controller);
     }
 
     public void Initiate()
     {
         text = controller.AMMO_TXT;
 
-        // TODO: update for multiple weapons
+        // TODO: update for multiple PlayerState.Weapons
         // Update ammo text
-        int ammo = weapons[0].PickupAmmo(0);
+        int ammo = PlayerState.Weapons[0].PickupAmmo(0);
         UpdateText(ammo.ToString());
     }
 
     public void Fire(InputAction.CallbackContext ctx, GameController controller)
     {
-        if (weapons[0].CanFire())
+        if (PlayerState.Weapons[0].CanFire())
         {
-            int ammo = weapons[0].Fire(ctx);
+            int ammo = PlayerState.Weapons[0].Fire(ctx);
             UpdateText(ammo.ToString());
         }
     }
 
     public void Pickup(string name, int amount)
     {
-        Weapon weapon = weapons.Find(w => w.name == name);
+        Weapon weapon = PlayerState.Weapons.Find(w => w.name == name);
         int ammo = weapon.PickupAmmo(amount);
         UpdateText(ammo.ToString());
     }
