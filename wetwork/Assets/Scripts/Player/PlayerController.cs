@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] PlayerInventory inventory;
     [SerializeField] InputActionReference fire;
+    [SerializeField] InputActionReference interact;
     [SerializeField] GameObject damageFlash;
     [SerializeField] public GameObject reticule;
 
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
     private bool damageFrame = false;
+    private Interactable interactable;
 
     private void Awake()
     {
@@ -54,16 +56,24 @@ public class PlayerController : MonoBehaviour
     void OnEnable()
     {
         fire.action.started += Fire;
+        interact.action.started += Interact;
     }
 
     private void OnDisable()
     {
         fire.action.started -= Fire;
+        interact.action.started -= Interact;
     }
 
     private void Fire(InputAction.CallbackContext ctx)
     {
         inventory.Fire(ctx, controller);
+    }
+
+    private void Interact(InputAction.CallbackContext ctx)
+    {
+        if (interactable != null)
+            interactable.Interact();
     }
 
     private void FixedUpdate()
@@ -130,5 +140,10 @@ public class PlayerController : MonoBehaviour
 
         inventory.controller = controller;
         inventory.Initiate();
+    }
+
+    public void SetExitSceneTransition(SceneTransition exit)
+    {
+        this.interactable = exit;
     }
 }

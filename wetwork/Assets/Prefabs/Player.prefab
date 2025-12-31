@@ -147,6 +147,7 @@ MonoBehaviour:
   animator: {fileID: 161641701502588834}
   inventory: {fileID: 5925307787922443785}
   fire: {fileID: 2222349750370745951, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
+  interact: {fileID: -5124815692902742674, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
   damageFlash: {fileID: 4780418029803186303}
   reticule: {fileID: 7129178349214573017}
 --- !u!114 &5925307787922443785

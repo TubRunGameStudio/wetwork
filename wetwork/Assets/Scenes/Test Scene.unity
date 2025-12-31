@@ -71035,12 +71035,24 @@ PrefabInstance:
       value: Scene Transition
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2042702
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1891466
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.97643
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.928
+      value: 11.912
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.352
+      value: -2.558
       objectReference: {fileID: 0}
     - target: {fileID: 1592764425190963182, guid: 0afdc63b3101cb64e870001bb4824a97, type: 3}
       propertyPath: m_LocalPosition.z

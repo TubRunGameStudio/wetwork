@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTransition : MonoBehaviour
+public class SceneTransition : MonoBehaviour, Interactable
 {
     [SerializeField] private string sceneTransitionName;
 
@@ -9,7 +9,20 @@ public class SceneTransition : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            SceneManager.LoadScene(sceneTransitionName, LoadSceneMode.Single);
+            PlayerController.PLAYER.SetExitSceneTransition(this);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            PlayerController.PLAYER.SetExitSceneTransition(null);
+        }
+    }
+
+    public void Interact()
+    {
+        SceneManager.LoadScene(sceneTransitionName, LoadSceneMode.Single);
     }
 }
