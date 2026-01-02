@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 3
-  maxHealth: 10
+  maxHealth: 5
   animator: {fileID: 161641701502588834}
   inventory: {fileID: 5925307787922443785}
   fire: {fileID: 2222349750370745951, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}

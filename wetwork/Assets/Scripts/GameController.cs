@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-
         if (PlayerController.PLAYER != null)
         {
             // player already exists, so just move it to the spawn location and set the Player gameobject parameter

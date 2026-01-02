@@ -144,4 +144,9 @@ public class PlayerController : MonoBehaviour
     {
         this.interactable = exit;
     }
+
+    public void Reset()
+    {
+        PlayerState.InitGame(maxHealth, new List<Weapon>());
+    }
 }

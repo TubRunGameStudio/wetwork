@@ -11,7 +11,6 @@ public static class PlayerState
 
     public static void InitGame(int maxHealth, List<Weapon> weapons)
     {
-        Debug.Log("Starting Game");
         Health = maxHealth;
         Weapons = weapons;
         Weapons.Add(new CCTV());

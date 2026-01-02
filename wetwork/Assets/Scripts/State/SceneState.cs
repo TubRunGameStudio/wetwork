@@ -30,4 +30,9 @@ public static class SceneState
         cctvs.TryGetValue(scene, out cctvsInScene);
         return cctvsInScene;
     }
+
+    public static void Reset()
+    {
+        cctvs = new Dictionary<string, List<Vector3>>();
+    }
 }
