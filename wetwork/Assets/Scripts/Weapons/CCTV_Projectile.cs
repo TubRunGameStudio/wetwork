@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.GraphicsBuffer;
 
 public class CCTV_Projectile : MonoBehaviour
@@ -30,5 +31,10 @@ public class CCTV_Projectile : MonoBehaviour
         }
         transform.position = Target;
         cutout.SetActive(true);
+
+        // Scene state
+        string scene = SceneManager.GetActiveScene().name;
+        SceneState.Add(scene, this);
+        Debug.Log("Number of cameras in " + scene + ": "+ SceneState.GetCCTVs(scene).Count);
     }
 }
