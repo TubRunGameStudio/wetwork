@@ -4,29 +4,29 @@ using UnityEngine;
 
 public static class SceneState
 {
-    private static Dictionary<string, List<CCTV_Projectile>> cctvs;
+    private static Dictionary<string, List<Vector3>> cctvs;
 
     static SceneState()
     {
-        cctvs = new Dictionary<string, List<CCTV_Projectile>>();
+        cctvs = new Dictionary<string, List<Vector3>>();
     }
 
     public static void Add(string scene, CCTV_Projectile cctv)
     {
-        List<CCTV_Projectile> cctvsInScene;
+        List<Vector3> cctvsInScene;
         if (cctvs.TryGetValue(scene, out cctvsInScene))
-            cctvsInScene.Add(cctv);
+            cctvsInScene.Add(cctv.transform.position);
         else
         {
-            cctvsInScene = new List<CCTV_Projectile>();
-            cctvsInScene.Add(cctv);
+            cctvsInScene = new List<Vector3>();
+            cctvsInScene.Add(cctv.transform.position);
             cctvs.Add(scene, cctvsInScene);
         }
     }
 
-    public static List<CCTV_Projectile> GetCCTVs(string scene)
+    public static List<Vector3> GetCCTVs(string scene)
     {
-        List<CCTV_Projectile> cctvsInScene;
+        List<Vector3> cctvsInScene;
         cctvs.TryGetValue(scene, out cctvsInScene);
         return cctvsInScene;
     }

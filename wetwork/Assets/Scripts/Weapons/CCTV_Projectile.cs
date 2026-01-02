@@ -17,7 +17,7 @@ public class CCTV_Projectile : MonoBehaviour
     {
         startPos = transform.position + new Vector3(0, .75f, 0);
         StartCoroutine(ArcMove());
-        gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Doodads");
+        SetSortingLayer();
     }
 
     IEnumerator ArcMove()
@@ -35,6 +35,17 @@ public class CCTV_Projectile : MonoBehaviour
         // Scene state
         string scene = SceneManager.GetActiveScene().name;
         SceneState.Add(scene, this);
-        Debug.Log("Number of cameras in " + scene + ": "+ SceneState.GetCCTVs(scene).Count);
+    }
+
+    public void Load(Vector3 pos)
+    {
+        transform.position = pos;
+        cutout.SetActive(true);
+        SetSortingLayer();
+    }
+
+    public void SetSortingLayer()
+    {
+        gameObject.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Doodads");
     }
 }

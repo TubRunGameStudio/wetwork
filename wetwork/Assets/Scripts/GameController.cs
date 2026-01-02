@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using TMPro;
+using NUnit.Framework;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour
 {
@@ -35,6 +38,8 @@ public class GameController : MonoBehaviour
         PLAYER.Initiate(this);
         RETICULE = PLAYER.reticule;
 
+        InitiateCCTVs();
+
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         mainCamera.SetPlayer(player);
     }
@@ -43,5 +48,24 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         Destroy(PLAYER.gameObject);
         GAMEOVER.SetActive(true);
+    }
+
+    private void InitiateCCTVs()
+    {
+        GameObject container = GameObject.Find("CCTVs");
+
+        string scene = SceneManager.GetActiveScene().name;
+        List<Vector3> cctvs = SceneState.GetCCTVs(scene);
+        if(cctvs != null && cctvs.Count > 0)
+        {
+            foreach(Vector3 pos in cctvs)
+            {
+                GameObject projectile = (GameObject)Resources.Load("projectile", typeof(GameObject));
+                GameObject obj = GameObject.Instantiate(projectile);
+                obj.transform.SetParent(container.transform);
+                CCTV_Projectile proj = obj.GetComponent<CCTV_Projectile>();
+                proj.Load(pos);
+            }
+        }
     }
 }
