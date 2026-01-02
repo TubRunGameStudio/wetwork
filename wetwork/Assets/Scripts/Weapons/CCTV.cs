@@ -11,6 +11,7 @@ public class CCTV : Weapon
     public const string NAME = "CAMERA";
     public override string name { get { return NAME; } }
     public GameObject projectile;
+    public GameObject container;
     private Vector3 target;
     private Vector3 origin;
     private bool canFire;
@@ -50,12 +51,16 @@ public class CCTV : Weapon
 
     public override int Fire(InputAction.CallbackContext ctx)
     {
+        if (container == null) {
+            container = GameObject.Find("CCTVs");
+        }
         if (projectile == null)
             projectile = (GameObject)Resources.Load("projectile", typeof(GameObject));
 
 
         GameObject obj = GameObject.Instantiate(projectile);
         CCTV_Projectile proj = obj.GetComponent<CCTV_Projectile>();
+        proj.transform.SetParent(container.transform);
         proj.transform.position = origin;
         proj.Target = target;
         proj.Activate();
