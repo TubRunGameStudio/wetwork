@@ -17,7 +17,7 @@ TagManager:
   - Ground
   - Mask
   - Obstacles
-  - 
+  - FogOfWar
   - 
   - 
   - 
@@ -67,6 +67,9 @@ TagManager:
     locked: 0
   - name: Mask
     uniqueID: 3065466967
+    locked: 0
+  - name: FogOfWar
+    uniqueID: 1783394599
     locked: 0
   m_RenderingLayers:
   - Default
