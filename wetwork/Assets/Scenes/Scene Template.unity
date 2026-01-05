@@ -1287,8 +1287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69ece9450fdbc743984404f8ba1bc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  HEALTH_BAR: {fileID: 2112777778}
+  HEALTH_BAR: {fileID: 2112777780}
   AMMO_TXT: {fileID: 598140801}
+  WEAPON_IMAGE: {fileID: 994646778}
   OBSTACLES: {fileID: 251760466}
   OBSTACLE_LAYERMASK:
     serializedVersion: 2

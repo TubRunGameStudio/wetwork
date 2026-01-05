@@ -9,7 +9,11 @@ using static UnityEngine.UI.Image;
 public class CCTV : Weapon
 {
     public const string NAME = "CAMERA";
+    public const string ICON = "camera";
+
     public override string name { get { return NAME; } }
+    public override string icon { get { return ICON; } }
+
     public GameObject projectile;
     public GameObject container;
     private Vector3 target;

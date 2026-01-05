@@ -4,11 +4,13 @@ using TMPro;
 using NUnit.Framework;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] public PlayerHealthBar HEALTH_BAR;
     [SerializeField] public TextMeshProUGUI AMMO_TXT;
+    [SerializeField] public Image WEAPON_IMAGE;
     [SerializeField] public Tilemap OBSTACLES;
     [SerializeField] public LayerMask OBSTACLE_LAYERMASK;
     [SerializeField] public PlayerController PLAYER;

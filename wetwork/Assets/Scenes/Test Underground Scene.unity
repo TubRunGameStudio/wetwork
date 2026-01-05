@@ -1809,6 +1809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   HEALTH_BAR: {fileID: 2112777780}
   AMMO_TXT: {fileID: 598140801}
+  WEAPON_IMAGE: {fileID: 994646778}
   OBSTACLES: {fileID: 251760466}
   OBSTACLE_LAYERMASK:
     serializedVersion: 2

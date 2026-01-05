@@ -7,10 +7,13 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private Image image;
+
     [SerializeField] InputActionReference aim;
     [SerializeField] InputActionReference weaponSelect;
     
@@ -50,6 +53,8 @@ public class PlayerInventory : MonoBehaviour
 
             PlayerState.CurrentWeapon = PlayerState.Weapons[PlayerState.CurrentWeaponIndex];
             UpdateText(PlayerState.CurrentWeapon.Ammo().ToString());
+            Sprite sprite = (Sprite) Resources.Load(PlayerState.CurrentWeapon.icon, typeof(Sprite));
+            image.sprite = sprite;
         }
 
     }
@@ -57,6 +62,7 @@ public class PlayerInventory : MonoBehaviour
     public void Initiate()
     {
         text = controller.AMMO_TXT;
+        image = controller.WEAPON_IMAGE;
 
         // TODO: update for multiple PlayerState.Weapons
         // Update ammo text
