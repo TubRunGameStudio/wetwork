@@ -19,4 +19,9 @@ public abstract class Weapon
 
         return ammo;
     }
+
+    public int Ammo()
+    {
+        return ammo;
+    }
 }

@@ -165,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   text: {fileID: 0}
   aim: {fileID: 1230304488655968873, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
+  weaponSelect: {fileID: 299558996597578072, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
   controller: {fileID: 0}
 --- !u!61 &8634332619099322954
 BoxCollider2D:

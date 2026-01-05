@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
         movementY = movementVector.y * .9f;
     }
 
+    #region - Enable / Disable - 
     void OnEnable()
     {
         fire.action.started += Fire;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         menu.action.started -= Menu;
 
     }
+    #endregion
 
     private void Fire(InputAction.CallbackContext ctx)
     {
