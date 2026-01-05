@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
@@ -13,10 +14,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] Animator animator;
     [SerializeField] PlayerInventory inventory;
-    [SerializeField] InputActionReference fire;
-    [SerializeField] InputActionReference interact;
     [SerializeField] GameObject damageFlash;
     [SerializeField] public GameObject reticule;
+
+    [SerializeField] InputActionReference fire;
+    [SerializeField] InputActionReference interact;
+    [SerializeField] InputActionReference menu;
 
     private GameController controller;
     private PlayerHealthBar healthBar;
@@ -55,12 +58,15 @@ public class PlayerController : MonoBehaviour
     {
         fire.action.started += Fire;
         interact.action.started += Interact;
+        menu.action.started += Menu;
     }
 
     private void OnDisable()
     {
         fire.action.started -= Fire;
         interact.action.started -= Interact;
+        menu.action.started -= Menu;
+
     }
 
     private void Fire(InputAction.CallbackContext ctx)
@@ -72,6 +78,11 @@ public class PlayerController : MonoBehaviour
     {
         if (interactable != null)
             interactable.Interact();
+    }
+
+    private void Menu(InputAction.CallbackContext ctx)
+    {
+        controller.Menu();
     }
 
     private void FixedUpdate()

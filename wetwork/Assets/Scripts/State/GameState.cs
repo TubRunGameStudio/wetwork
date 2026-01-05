@@ -10,4 +10,9 @@ public class Restart : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("Test Scene", LoadSceneMode.Single);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

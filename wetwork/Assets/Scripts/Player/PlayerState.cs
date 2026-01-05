@@ -15,5 +15,6 @@ public static class PlayerState
         Weapons = weapons;
         Weapons.Add(new CCTV());
         PlayerLoadPosition = new Vector3(0,0,0);
+        PlayerReturnPosition = new Vector3(0,0,0);
     }
 }

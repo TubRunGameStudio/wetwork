@@ -14,10 +14,13 @@ public class GameController : MonoBehaviour
     [SerializeField] public PlayerController PLAYER;
     [SerializeField] public GameObject RETICULE;
     [SerializeField] private GameObject GAMEOVER;
+    [SerializeField] private GameObject MENU;
 
     public CameraScript mainCamera;
     public GameObject player;
     public GameObject playerPrefab;
+
+    private bool menu = false;
 
     void Awake()
     {
@@ -47,6 +50,19 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0;
         Destroy(PLAYER.gameObject);
         GAMEOVER.SetActive(true);
+    }
+
+    public void Menu()
+    {
+        if (menu)   // Close menu
+        {
+            Time.timeScale = 1;
+            MENU.SetActive(false);
+        } else      // Open Menu
+        {
+            Time.timeScale = 0;
+            MENU.SetActive(true);
+        }
     }
 
     private void InitiateCCTVs()
