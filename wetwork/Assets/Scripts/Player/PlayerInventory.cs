@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour
     public void FixedUpdate()
     {
         Vector2 aimPos = Camera.main.ScreenToWorldPoint(aim.action.ReadValue<Vector2>());
-        PlayerState.Weapons[0].CanFire(aimPos, controller);
+        PlayerState.CurrentWeapon.CanFire(aimPos, controller);
     }
 
     void OnEnable()
@@ -60,15 +60,15 @@ public class PlayerInventory : MonoBehaviour
 
         // TODO: update for multiple PlayerState.Weapons
         // Update ammo text
-        int ammo = PlayerState.Weapons[0].Ammo();
+        int ammo = PlayerState.CurrentWeapon.Ammo();
         UpdateText(ammo.ToString());
     }
 
     public void Fire(InputAction.CallbackContext ctx, GameController controller)
     {
-        if (PlayerState.Weapons[0].CanFire())
+        if (PlayerState.CurrentWeapon.CanFire())
         {
-            int ammo = PlayerState.Weapons[0].Fire(ctx);
+            int ammo = PlayerState.CurrentWeapon.Fire(ctx);
             UpdateText(ammo.ToString());
         }
     }

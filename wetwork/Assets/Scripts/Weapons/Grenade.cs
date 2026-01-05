@@ -8,6 +8,7 @@ public class Grenade : Weapon
 
     public override int Fire(InputAction.CallbackContext ctx)
     {
+        Debug.Log("BOOM!");
         ammo--;
         return ammo;
     }

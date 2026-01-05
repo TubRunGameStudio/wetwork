@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7394794649777720846}
   - component: {fileID: 813352462381952302}
   m_Layer: 3
-  m_Name: CameraPickup
+  m_Name: GrenadePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: -307362299
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 74b6bd2eca7b8e04b941b104951d403f, type: 3}
+  m_Sprite: {fileID: -4404730915955676143, guid: ee3146014f28a78478e594b34e6fb039, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf68bc034a02e44999232fb6f44e013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  ammoType: 0
+  ammoType: 1
   ammount: 5
 --- !u!61 &813352462381952302
 BoxCollider2D:
@@ -144,7 +144,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.28125, y: 0.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
