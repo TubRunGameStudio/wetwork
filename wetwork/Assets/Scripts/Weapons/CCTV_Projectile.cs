@@ -34,7 +34,7 @@ public class CCTV_Projectile : MonoBehaviour
 
         // Scene state
         string scene = SceneManager.GetActiveScene().name;
-        SceneState.Add(scene, this);
+        SceneState.AddCCTV(scene, this);
     }
 
     public void Load(Vector3 pos)

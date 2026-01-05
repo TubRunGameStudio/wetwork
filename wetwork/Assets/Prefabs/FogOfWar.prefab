@@ -1718,6 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8594b6475af93a4d931d8163190d13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FogOfWar
+  hidden: {fileID: 2397740468582787600}
 --- !u!1 &8538052308324933229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 703908641232949633}
+  - component: {fileID: 2397740468582787600}
   m_Layer: 12
   m_Name: FogOfWar
   m_TagString: Untagged
@@ -1751,6 +1753,18 @@ Transform:
   - {fileID: 256875660633862221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2397740468582787600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8538052308324933229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02af21fc80b7c1438f3375391b58a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FogOfWar
 --- !u!1 &8929809305086642294
 GameObject:
   m_ObjectHideFlags: 0
