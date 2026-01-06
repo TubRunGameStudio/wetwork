@@ -1,10 +1,12 @@
+using System.Collections;
 using UnityEngine;
 
 public class Grenade_Projectile : Projectile
 {
-    public override void Activate()
+
+    protected override IEnumerator ArcMove()
     {
-        base.Activate();
+        yield return base.ArcMove();
         Debug.Log("Boom!");
     }
 }
