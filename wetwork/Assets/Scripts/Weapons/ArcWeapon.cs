@@ -9,9 +9,9 @@ public abstract class ArcWeapon : Weapon
     protected abstract GameObject container { get;  }
 
     public GameObject projectile;
-    private Vector3 target;
-    private Vector3 origin;
-    private bool canFire;
+    protected Vector3 target;
+    protected Vector3 origin;
+    protected bool canFire;
 
     public override bool CanFire(Vector2 aim, GameController controller)
     {
@@ -25,20 +25,18 @@ public abstract class ArcWeapon : Weapon
         if (hit.collider == null)
         {
             // No Hit
-            canFire = false;
-            controller.RETICULE.SetActive(false);
-            return false;
+            target = point;
         }
         else
         {
             // Hit
             target = hit.point;
-            origin = playerPos;
-            controller.RETICULE.SetActive(true);
-            controller.RETICULE.transform.position = target;
-            canFire = true;
-            return true;
         }
+        origin = playerPos;
+        controller.RETICULE.SetActive(true);
+        controller.RETICULE.transform.position = target;
+        canFire = true;
+        return true;
     }
 
     public override bool CanFire()
