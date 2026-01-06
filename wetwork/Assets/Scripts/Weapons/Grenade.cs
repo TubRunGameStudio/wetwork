@@ -3,25 +3,20 @@ using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.UI.Image;
 
-public class Grenade : Weapon
+public class Grenade : ArcWeapon
 {
     public const string NAME = "GRENADE";
     public const string ICON = "grenade";
+    public const string PROJECTILE = "grenade_prefab";
     public override string name { get { return NAME; } }
     public override string icon { get { return ICON; } }
 
-    public override int Fire(InputAction.CallbackContext ctx)
+    protected override string projectilePath { get { return PROJECTILE; } }
+    protected override GameObject container { get { return GameObject.Find("Doodads"); } }
+
+    protected override Projectile GetProjectile(GameObject obj)
     {
-        Debug.Log("BOOM!");
-        ammo--;
-        return ammo;
+        return obj.GetComponent<Grenade_Projectile>();
     }
-    public override bool CanFire()
-    {
-        return ammo > 0;
-    }
-    public override bool CanFire(Vector2 aim, GameController controller)
-    {
-        return CanFire();
-    }
+
 }
