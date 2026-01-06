@@ -105,3 +105,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Grenade_Projectile
   speed: 0.5
   jumpHeight: 2
+  explosion: {fileID: 8107456577472925103, guid: 84c82be3dc8d43b40999a4de6b684734, type: 3}
