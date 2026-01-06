@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour
         {
             foreach(Vector3 pos in cctvs)
             {
-                GameObject projectile = (GameObject)Resources.Load("projectile", typeof(GameObject));
+                GameObject projectile = (GameObject)Resources.Load(CCTV.PROJECTILE, typeof(GameObject));
                 GameObject obj = GameObject.Instantiate(projectile);
                 obj.transform.SetParent(container.transform);
                 CCTV_Projectile proj = obj.GetComponent<CCTV_Projectile>();
