@@ -12,6 +12,7 @@ public abstract class ArcWeapon : Weapon
     protected Vector3 target;
     protected Vector3 origin;
     protected bool canFire;
+    protected float range = 6;
 
     public override bool CanFire(Vector2 aim, GameController controller)
     {
@@ -20,12 +21,15 @@ public abstract class ArcWeapon : Weapon
         point.z = 0;
         Vector3 playerPos = controller.PLAYER.transform.position;
         Vector3 vec = point - playerPos;
-        RaycastHit2D hit = Physics2D.Raycast(playerPos, vec, vec.magnitude, controller.OBSTACLE_LAYERMASK);
+        float distance = vec.magnitude < range ? vec.magnitude : range;
+        RaycastHit2D hit = Physics2D.Raycast(playerPos, vec, distance, controller.OBSTACLE_LAYERMASK);
 
         if (hit.collider == null)
         {
             // No Hit
-            target = point;
+            target = playerPos + vec.normalized * range;
+            if ((target - playerPos).magnitude > vec.magnitude)
+                target = point;
         }
         else
         {

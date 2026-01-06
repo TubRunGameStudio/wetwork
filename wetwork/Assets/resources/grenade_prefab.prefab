@@ -103,6 +103,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af9602762b6323f49bf3db25e3a215e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Grenade_Projectile
-  cutout: {fileID: 0}
   speed: 0.5
-  jumpHeight: 1
+  jumpHeight: 2
