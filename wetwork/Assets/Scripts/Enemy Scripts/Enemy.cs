@@ -45,16 +45,6 @@ public class Enemy : MonoBehaviour
         timer += Time.deltaTime;
         if (state == State.ALERT)
         {
-            if(timer > 1)
-            {
-                PlayerController player = destination.GetComponent<PlayerController>();
-                animator.SetBool("Shoot", true);
-                player.Damage(1);
-                timer = 0;
-            } else
-            {
-                animator.SetBool("Shoot", false);
-            }
             agent.isStopped = true;
         }
         else
@@ -163,6 +153,12 @@ public class Enemy : MonoBehaviour
             GameObject.Destroy(lastKnownPosition);
         }
             this.state = state;
+    }
+
+    public void Shoot()
+    {
+        PlayerController player = destination.GetComponent<PlayerController>();
+        player.Damage(1);
     }
 
     public void Damage()
