@@ -5,6 +5,11 @@ public class Explosion : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] int damage;
 
+    public void Complete()
+    {
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController player = other.GetComponent<PlayerController>();
