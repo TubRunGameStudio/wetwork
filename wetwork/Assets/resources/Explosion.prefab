@@ -128,7 +128,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.328125
+  m_Radius: 1
 --- !u!114 &3026662536519029103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   animator: {fileID: 4219975646416296573}
+  damage: 2
 --- !u!95 &4219975646416296573
 Animator:
   serializedVersion: 7

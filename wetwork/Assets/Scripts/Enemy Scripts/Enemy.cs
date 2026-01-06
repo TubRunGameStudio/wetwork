@@ -165,4 +165,9 @@ public class Enemy : MonoBehaviour
             this.state = state;
     }
 
+    public void Damage()
+    {
+        Destroy(transform.parent.gameObject);
+    }
+
 }

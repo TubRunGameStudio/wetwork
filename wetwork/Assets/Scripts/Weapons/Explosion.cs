@@ -3,15 +3,16 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] int damage;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
+        PlayerController player = other.GetComponent<PlayerController>();
+        if (player != null)
+            player.Damage(damage);
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
+        Enemy enemy = other.GetComponent<Enemy>();
+        if (enemy != null)
+            enemy.Damage();
     }
 }

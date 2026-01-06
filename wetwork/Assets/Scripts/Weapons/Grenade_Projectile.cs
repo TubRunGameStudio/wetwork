@@ -15,6 +15,5 @@ public class Grenade_Projectile : Projectile
         GameObject expl = GameObject.Instantiate(explosion);
         expl.transform.position = transform.position;
         Destroy(gameObject);
-        Debug.Log("BOOM!");
     }
 }
