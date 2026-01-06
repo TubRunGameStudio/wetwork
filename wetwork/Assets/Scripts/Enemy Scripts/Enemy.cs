@@ -158,7 +158,8 @@ public class Enemy : MonoBehaviour
     public void Shoot()
     {
         PlayerController player = destination.GetComponent<PlayerController>();
-        player.Damage(1);
+        if(player != null)
+            player.Damage(1);
     }
 
     public void Damage()
