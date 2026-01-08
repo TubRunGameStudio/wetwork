@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a2285413533d2964e84a2ded57570a6f
+guid: 382b799f82ce60d40a51e43e4a3caddf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4706035481551954130
-    second: twilioquest-76-1x_0
+      213: -852123378562847803
+    second: duel-1x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: twilioquest-76-1x_0
+      name: duel-1x_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 76
+        width: 256
         height: 1
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2f16b5c9adc0beb0800000000000000
-      internalID: -4706035481551954130
+      spriteID: 5cba4fb4d46ac24f0800000000000000
+      internalID: -852123378562847803
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      twilioquest-76-1x_0: -4706035481551954130
+      duel-1x_0: -852123378562847803
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
