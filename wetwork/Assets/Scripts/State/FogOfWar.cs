@@ -5,7 +5,6 @@ public class FogOfWar : MonoBehaviour
 {
     private string key;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         key = SceneManager.GetActiveScene().name + "_" + gameObject.name;
