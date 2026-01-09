@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   text: {fileID: 0}
+  image: {fileID: 0}
   aim: {fileID: 1230304488655968873, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
   weaponSelect: {fileID: 299558996597578072, guid: c0b637ee5fb245a4a8a5b8ac2ec89ebe, type: 3}
   controller: {fileID: 0}
@@ -201,7 +202,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03140068, y: 0.107599705}
+  m_Offset: {x: 0.000012814999, y: 0.107599705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -211,7 +212,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.27313995, y: 0.22661096}
+  m_Size: {x: 0.33596694, y: 0.22661096}
   m_EdgeRadius: 0
 --- !u!50 &4369718435559412504
 Rigidbody2D:
