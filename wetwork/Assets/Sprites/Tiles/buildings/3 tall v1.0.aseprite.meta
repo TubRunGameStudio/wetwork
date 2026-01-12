@@ -151,7 +151,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: 3 tall v1.0_0
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_1
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -211,7 +211,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_2
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_3
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -271,7 +271,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_4
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -301,17 +301,77 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_5
     originalName: 
-    pivot: {x: 0.5, y: 0.21428572}
+    pivot: {x: 0.5, y: 0.2142857}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
-      x: 204
+      x: 200
       y: 4
       width: 32
       height: 112
     spriteID: 4e39a864bdb7b174da62679b76fffc5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: 16, y: 16}
+      - {x: 16, y: 49}
+      - {x: 2, y: 56}
+      - {x: -2, y: 56}
+      - {x: -16, y: 49}
+      - {x: -16, y: 16}
+      - {x: -2, y: 9}
+      - {x: 2, y: 9}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: 3 tall v1.0_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.2142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 236
+      y: 4
+      width: 32
+      height: 112
+    spriteID: 802d6426d918db445bbfed7472daf44e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: 16, y: 16}
+      - {x: 16, y: 49}
+      - {x: 2, y: 56}
+      - {x: -2, y: 56}
+      - {x: -16, y: 49}
+      - {x: -16, y: 16}
+      - {x: -2, y: 9}
+      - {x: 2, y: 9}
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: 3 tall v1.0_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.2142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 271
+      y: 4
+      width: 32
+      height: 112
+    spriteID: ae563ba443fd92a40bf74be06c6a742b
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -347,9 +407,9 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
+        x: 1
         y: 0
-        width: 232
+        width: 299
         height: 112
       spriteId: 32bda28f6e5463542bc3ce51ca37f6d6
     linkedCells: []
@@ -397,5 +457,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 234, y: 112}
-  previousTextureSize: {x: 256, y: 128}
+  canvasSize: {x: 300, y: 112}
+  previousTextureSize: {x: 512, y: 128}
