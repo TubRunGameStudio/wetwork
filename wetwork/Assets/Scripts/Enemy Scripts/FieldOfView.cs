@@ -18,7 +18,7 @@ public class FieldOfView : MonoBehaviour
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
-        fov = 60f;
+        fov = 90f;
         origin = Vector3.zero;
 
         GetComponent<MeshRenderer>().sortingLayerName = "FieldOfView";
