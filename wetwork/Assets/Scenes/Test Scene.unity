@@ -9248,6 +9248,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.92
       objectReference: {fileID: 0}
+    - target: {fileID: 7868462317206236013, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: path.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7868462317206236013, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
+      propertyPath: 'path.Array.data[4]'
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 9070295036217177795, guid: 763917246c1390044abd7bb8937bafb1, type: 3}
