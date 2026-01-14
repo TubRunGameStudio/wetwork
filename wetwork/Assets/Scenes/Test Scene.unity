@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 251760469}
   - component: {fileID: 251760468}
   - component: {fileID: 251760467}
+  - component: {fileID: 251760470}
   m_Layer: 11
   m_Name: Obstacles
   m_TagString: Untagged
@@ -308,14 +309,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &251760461
-Transform:
+--- !u!224 &251760461
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251760460}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -323,6 +323,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 460809689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!483693784 &251760465
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -7207,6 +7212,20 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &251760470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251760460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d63f6f968ef104b9ffb69261aaf3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TilemapMask
+  maskCell: {fileID: 6232566873042256313, guid: af23e63b69c3b7e439c1d2155459998b, type: 3}
+  maskParentObj: {fileID: 0}
 --- !u!1 &328202065
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private int maxHealth;
     [SerializeField] Animator animator;
+    [SerializeField] Animator silhouette;
+    [SerializeField] SpriteRenderer silhouetteSprite;
     [SerializeField] PlayerInventory inventory;
     [SerializeField] GameObject damageFlash;
     [SerializeField] public GameObject reticule;
@@ -28,6 +30,7 @@ public class PlayerController : MonoBehaviour
     private float movementY;
     private bool damageFrame = false;
     private Interactable interactable;
+    private List<Animator> animators;
 
     private void Awake()
     {
@@ -44,7 +47,9 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
 
-
+        animators = new List<Animator>();
+        animators.Add(animator);
+        animators.Add(silhouette);
     }
 
     void OnMove(InputValue movementValue)
@@ -100,24 +105,39 @@ public class PlayerController : MonoBehaviour
         }
 
             // Animation
-            Vector3 movement = new Vector3(movementX, movementY);
+        Vector3 movement = new Vector3(movementX, movementY);
         rb.linearVelocity = movement * speed;
 
         if (rb.linearVelocity.magnitude > 0)
-            animator.SetBool("Walking", true);
+            SetAnimators("Walking", true);
         else
-            animator.SetBool("Walking", false);
+            SetAnimators("Walking", false);
 
         if (movementY > 0)
-            animator.SetBool("North", true);
+            SetAnimators("North", true);
         else if (movementY < 0)
-            animator.SetBool("North", false);
+            SetAnimators("North", false);
 
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+
         if (movementX > 0)
+        {
             sprite.flipX = false;
+            silhouetteSprite.flipX = false;
+        }
         else if (movementX < 0)
+        {
             sprite.flipX = true;
+            silhouetteSprite.flipX = true;
+        }
+    }
+
+    private void SetAnimators(string param, bool val)
+    {
+        foreach(Animator anim in animators)
+        {
+            anim.SetBool(param, val);
+        }
     }
 
     public void Heal(int heal)
