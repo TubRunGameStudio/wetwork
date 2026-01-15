@@ -20,6 +20,7 @@ public static class PlayerState
         Weapons = weapons;
         Weapons.Add(new CCTV());
         Weapons.Add(new Grenade());
+        Weapons.Add(new ProximityMine());
         CurrentWeaponIndex = 0;
         CurrentWeapon = Weapons[CurrentWeaponIndex];
         PlayerLoadPosition = new Vector3(0,0,0);
