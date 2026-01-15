@@ -3,11 +3,23 @@ using UnityEngine;
 public class ProximityMine : MonoBehaviour
 {
     [SerializeField] GameObject explosion;
+    private Animator animator;
+
+    public void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
         if (enemy != null)
-            Explode();
+            Trigger();
+    }
+
+    private void Trigger()
+    {
+        animator.SetBool("Trigger", true);
     }
 
     private void Explode()
