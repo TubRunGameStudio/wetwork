@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class ProximityMine : Weapon
 {
-    private const string NAME = "PROXIMITY";
-    private const string ICON = "proximity_mine";
+    private const string NAME = "PROXIMITYMINE";
+    private const string ICON = "proximity_mine_icon";
     private const string PREFAB_PATH = "proximity_mine_prefab";
     public override string name { get { return NAME; } }
     public override string icon { get { return ICON; } }

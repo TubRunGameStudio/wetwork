@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
 {
-    public enum Ammo { CAMERA, GRENADE};
+    public enum Ammo { CAMERA, GRENADE, PROXIMITYMINE};
     [SerializeField] Ammo ammoType;
     [SerializeField] int ammount;
 
