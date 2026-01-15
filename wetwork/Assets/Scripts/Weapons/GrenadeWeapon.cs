@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.UI.Image;
 
-public class Grenade : ArcWeapon
+public class GrenadeWeapon : ArcWeapon
 {
     public const string NAME = "GRENADE";
     public const string ICON = "grenade";

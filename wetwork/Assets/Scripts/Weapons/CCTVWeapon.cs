@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.RuleTile.TilingRuleOutput;
 using static UnityEngine.UI.Image;
 
-public class CCTV : ArcWeapon
+public class CCTVWeapon : ArcWeapon
 {
     public const string NAME = "CAMERA";
     public const string ICON = "camera";

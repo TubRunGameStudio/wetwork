@@ -18,9 +18,9 @@ public static class PlayerState
     {
         Health = maxHealth;
         Weapons = weapons;
-        Weapons.Add(new CCTV());
-        Weapons.Add(new Grenade());
-        Weapons.Add(new ProximityMine());
+        Weapons.Add(new CCTVWeapon());
+        Weapons.Add(new GrenadeWeapon());
+        Weapons.Add(new ProximityMineWeapon());
         CurrentWeaponIndex = 0;
         CurrentWeapon = Weapons[CurrentWeaponIndex];
         PlayerLoadPosition = new Vector3(0,0,0);
