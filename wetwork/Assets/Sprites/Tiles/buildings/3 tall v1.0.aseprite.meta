@@ -151,7 +151,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: 3 tall v1.0_0
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_1
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -211,7 +211,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_2
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_3
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -271,7 +271,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_4
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -301,7 +301,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_5
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -331,7 +331,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_6
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -361,7 +361,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: 3 tall v1.0_7
     originalName: 
-    pivot: {x: 0.5, y: 0.2142857}
+    pivot: {x: 0.5, y: 0.071428575}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
