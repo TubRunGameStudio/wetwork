@@ -1,6 +1,6 @@
 using UnityEngine;
 
-interface Interactable
+public interface Interactable
 {
     void Interact();
 }

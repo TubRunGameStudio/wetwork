@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
     [SerializeField] public GameObject RETICULE;
     [SerializeField] private GameObject GAMEOVER;
     [SerializeField] private GameObject MENU;
+    [SerializeField] private Minimap minimap;
 
     public CameraScript mainCamera;
     public GameObject player;
@@ -84,5 +85,10 @@ public class GameController : MonoBehaviour
                 proj.Load(pos);
             }
         }
+    }
+
+    public void SetMinimap(bool setMinimap)
+    {
+        minimap.SetMinimap(setMinimap);
     }
 }

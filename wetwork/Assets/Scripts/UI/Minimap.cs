@@ -5,17 +5,16 @@ public class Minimap : MonoBehaviour
 {
     [SerializeField] private GameObject minimap;
     [SerializeField] private GameObject staticMap;
-    public bool minimapEnabled;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Awake()
     {
-        minimapEnabled = false;
+        staticMap.SetActive(true);
+        minimap.SetActive(false);
     }
 
-    private void Update()
+    public void SetMinimap(bool setMinimap)
     {
-        if (minimapEnabled)
+        if (setMinimap)
         {
             minimap.SetActive(true);
             staticMap.SetActive(false);
