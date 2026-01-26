@@ -61,10 +61,12 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 1;
             MENU.SetActive(false);
+            menu = false;
         } else      // Open Menu
         {
             Time.timeScale = 0;
             MENU.SetActive(true);
+            menu = true;
         }
     }
 
