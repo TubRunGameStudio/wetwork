@@ -1,5 +1,6 @@
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RadioRelay : MonoBehaviour, Interactable
 {
@@ -17,6 +18,13 @@ public class RadioRelay : MonoBehaviour, Interactable
 
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         player = controller.PLAYER;
+
+        active = SceneState.GetRelay(SceneState.GetFullPathName(gameObject));
+        if(active)
+        {
+            animator.SetBool("selfActive", true);
+            tower.Refresh();
+        }
     }
     private void Update()
     {
@@ -50,6 +58,7 @@ public class RadioRelay : MonoBehaviour, Interactable
     public void Interact()
     {
         active = true;
+        SceneState.SetRelay(SceneState.GetFullPathName(gameObject), active);
         animator.SetBool("selfActive", true);
         tower.Refresh();
     }

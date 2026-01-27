@@ -3,16 +3,34 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Android;
+using UnityEngine.SceneManagement;
 
 public static class SceneState
 {
     private static Dictionary<string, List<Vector3>> cctvs;
     private static Dictionary<string, bool> fogOfWar;
+    private static Dictionary<string, bool> relays;
 
     static SceneState()
     {
         cctvs = new Dictionary<string, List<Vector3>>();
         fogOfWar = new Dictionary<string, bool>();
+        relays = new Dictionary<string, bool>();
+    }
+
+    public static void SetRelay(string path, bool active)
+    {
+        bool isNew = relays.TryAdd(path, active);
+        if(!isNew)
+        {
+            relays[path] = active;
+        }
+    }
+
+    public static bool GetRelay(string path)
+    {
+        relays.TryGetValue(path, out bool active);
+        return active;
     }
 
     public static void AddCCTV(string scene, CCTV_Projectile cctv)
@@ -58,5 +76,16 @@ public static class SceneState
     {
         cctvs = new Dictionary<string, List<Vector3>>();
         fogOfWar = new Dictionary<string, bool>();
+    }
+
+    public static string GetFullPathName(GameObject obj)
+    {
+        string path = SceneManager.GetActiveScene().name + "/" + obj.name;
+        while (obj.transform.parent != null)
+        {
+            obj = obj.transform.parent.gameObject;
+            path = "/" + obj.name + path;
+        }
+        return path;
     }
 }
