@@ -4,6 +4,7 @@ using UnityEngine.InputSystem.XR;
 public class RadioTower : MonoBehaviour
 {
     [SerializeField] RadioRelay[] relays;
+    [SerializeField] Animator animator;
     GameController controller;
 
     private void Start()
@@ -24,7 +25,13 @@ public class RadioTower : MonoBehaviour
                 allActive = false;
         }
 
+        if (anyActive)
+            animator.SetBool("anyActive", true);
+
         if (allActive)
+        {
+            animator.SetBool("allActive", true);
             controller.SetMinimap(true);
+        }
     }
 }
