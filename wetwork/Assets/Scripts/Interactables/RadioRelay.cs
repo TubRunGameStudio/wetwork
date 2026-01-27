@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 public class RadioRelay : MonoBehaviour, Interactable
@@ -25,6 +26,9 @@ public class RadioRelay : MonoBehaviour, Interactable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!collision.TryGetComponent<PlayerController>(out var player))
+            return;
+
         inRange = true;
         player.SetInteractable(this);
         tooltip.SetActive(true);
@@ -32,6 +36,9 @@ public class RadioRelay : MonoBehaviour, Interactable
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!collision.TryGetComponent<PlayerController>(out var player))
+            return;
+
         inRange = false;
         player.SetInteractable(null);
         tooltip.SetActive(false);
