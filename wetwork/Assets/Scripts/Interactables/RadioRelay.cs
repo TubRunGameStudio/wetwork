@@ -29,6 +29,9 @@ public class RadioRelay : MonoBehaviour, Interactable
         if (!collision.TryGetComponent<PlayerController>(out var player))
             return;
 
+        if (active)
+            return;
+
         inRange = true;
         player.SetInteractable(this);
         tooltip.SetActive(true);
