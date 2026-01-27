@@ -4,6 +4,7 @@ public class RadioRelay : MonoBehaviour, Interactable
 {
     [SerializeField] GameObject tooltip;
     [SerializeField] RadioTower tower;
+    [SerializeField] Animator animator;
     private GameController controller;
     private PlayerController player;
     private bool inRange;
@@ -39,6 +40,7 @@ public class RadioRelay : MonoBehaviour, Interactable
     public void Interact()
     {
         active = true;
+        animator.SetBool("selfActive", true);
         tower.Refresh();
     }
 }
