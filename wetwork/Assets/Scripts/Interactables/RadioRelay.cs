@@ -1,20 +1,24 @@
 using UnityEngine;
 
-public class RadioTower : MonoBehaviour, Interactable
+public class RadioRelay : MonoBehaviour, Interactable
 {
     [SerializeField] GameObject tooltip;
+    [SerializeField] RadioTower tower;
     private GameController controller;
     private PlayerController player;
     private bool inRange;
+    public bool active;
 
     void Start()
     {
+        active = false;
+
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         player = controller.PLAYER;
     }
     private void Update()
     {
-        if(inRange)
+        if (inRange)
             tooltip.transform.position = Camera.main.WorldToScreenPoint(transform.position);
     }
 
@@ -34,6 +38,7 @@ public class RadioTower : MonoBehaviour, Interactable
 
     public void Interact()
     {
-        controller.SetMinimap(true);
+        active = true;
+        tower.Refresh();
     }
 }
