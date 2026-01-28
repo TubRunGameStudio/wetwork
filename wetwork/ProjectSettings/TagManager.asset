@@ -60,17 +60,20 @@ TagManager:
   - name: Minimap
     uniqueID: 3259866613
     locked: 0
-  - name: FieldOfView
-    uniqueID: 1966974815
-    locked: 0
   - name: Collider
     uniqueID: 2328741553
+    locked: 0
+  - name: FieldOfView
+    uniqueID: 1966974815
     locked: 0
   - name: Mask
     uniqueID: 3065466967
     locked: 0
   - name: FogOfWar
     uniqueID: 1783394599
+    locked: 0
+  - name: Minimap UI
+    uniqueID: 4230056309
     locked: 0
   m_RenderingLayers:
   - Default
