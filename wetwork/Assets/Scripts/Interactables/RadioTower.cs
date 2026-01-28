@@ -6,6 +6,7 @@ public class RadioTower : MonoBehaviour
 {
     [SerializeField] RadioRelay[] relays;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject range;
     private GameController controller;
     public const float RANGE = 20f;
 
@@ -33,7 +34,7 @@ public class RadioTower : MonoBehaviour
         if (allActive)
         {
             animator.SetBool("allActive", true);
-            controller.SetMinimap(true);
+            range.SetActive(true);
         }
     }
 }
