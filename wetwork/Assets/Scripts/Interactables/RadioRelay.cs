@@ -67,6 +67,10 @@ public class RadioRelay : MonoBehaviour, Interactable
         animator.SetBool("selfActive", true);
         tower.Refresh();
     }
+    public void AllActive()
+    {
+        animator.SetBool("allActive", true);
+    }
 
     private class RadioRangeException : System.Exception
     {

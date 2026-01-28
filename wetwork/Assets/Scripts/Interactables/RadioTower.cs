@@ -35,6 +35,10 @@ public class RadioTower : MonoBehaviour
         {
             animator.SetBool("allActive", true);
             range.SetActive(true);
+            foreach (RadioRelay relay in relays)
+            {
+                relay.AllActive();
+            }
         }
     }
 }
