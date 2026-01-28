@@ -6,7 +6,8 @@ public class RadioTower : MonoBehaviour
 {
     [SerializeField] RadioRelay[] relays;
     [SerializeField] Animator animator;
-    GameController controller;
+    private GameController controller;
+    public const float RANGE = 15f;
 
     private void Start()
     {

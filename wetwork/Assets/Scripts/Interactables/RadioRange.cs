@@ -7,7 +7,7 @@ public class RadioRange : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        DrawCircle(100, 10, transform.position);
+        DrawCircle(100, RadioTower.RANGE, transform.position);
     }
 
     private void DrawCircle(int steps, float radius, Vector3 center)

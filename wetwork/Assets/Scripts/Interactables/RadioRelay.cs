@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +15,10 @@ public class RadioRelay : MonoBehaviour, Interactable
 
     void Start()
     {
+        float towerDistance = Vector3.Distance(transform.position, tower.transform.position);
+        if (towerDistance > RadioTower.RANGE)
+            throw new RadioRangeException($"Tower at position {transform.position} is {towerDistance} distance away from tower, greater than range {RadioTower.RANGE}");
+
         active = false;
 
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
@@ -61,5 +66,19 @@ public class RadioRelay : MonoBehaviour, Interactable
         SceneState.SetRelay(SceneState.GetFullPathName(gameObject), active);
         animator.SetBool("selfActive", true);
         tower.Refresh();
+    }
+
+    private class RadioRangeException : System.Exception
+    {
+        public RadioRangeException() 
+        { }
+
+        public RadioRangeException(string message)
+            : base(message)
+        { }
+
+        public RadioRangeException(string message, Exception innerException)
+            : base(message, innerException)
+        { }
     }
 }
