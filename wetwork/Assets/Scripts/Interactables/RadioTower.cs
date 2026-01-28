@@ -9,6 +9,8 @@ public class RadioTower : MonoBehaviour
     [SerializeField] GameObject range;
     private GameController controller;
     public const float RANGE = 20f;
+    bool allActive = false;
+    int numActive = 0;
 
     private void Start()
     {
@@ -17,18 +19,18 @@ public class RadioTower : MonoBehaviour
 
     public void Refresh()
     {
-        bool allActive = true;
-        bool anyActive = false;
+        allActive = true;
+        numActive = 0;
 
-        foreach(RadioRelay relay in relays)
+        foreach (RadioRelay relay in relays)
         {
             if (relay.active)
-                anyActive = true;
+                numActive++;
             else
                 allActive = false;
         }
 
-        if (anyActive)
+        if (numActive > 0)
             animator.SetBool("anyActive", true);
 
         if (allActive)
@@ -40,5 +42,15 @@ public class RadioTower : MonoBehaviour
                 relay.AllActive();
             }
         }
+    }
+
+    public bool AllActive()
+    {
+        return allActive;
+    }
+
+    public int NumActive()
+    {
+        return numActive;
     }
 }
