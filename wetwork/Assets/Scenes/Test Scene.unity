@@ -7379,7 +7379,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionSecretArea
   missionID: 1
-  fogOfWar: {fileID: 1850716535}
 --- !u!1 &542317383
 GameObject:
   m_ObjectHideFlags: 0
@@ -61772,11 +61771,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5400fe612c9f1a48a4b9573d7d0f724, type: 3}
---- !u!1 &1850716535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8538052308324933229, guid: 0ee254745349a51469a1137084cdb654, type: 3}
-  m_PrefabInstance: {fileID: 8286811800064140180}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850717872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
@@ -76790,6 +76784,118 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1850717876}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094879654}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094879654}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateRadio
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateRelay
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094879654}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2094879654}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateRadio
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateRelay
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MissionActivateTower, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MissionActivateTower, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MissionActivateTower, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MissionActivateTower, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8555705361140396036, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.3
@@ -76805,52 +76911,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1850717876}
-    - targetCorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2104589540}
   m_SourcePrefab: {fileID: 100100000, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
---- !u!114 &2104589540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850717872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d44f351962555a4c8202f2b6b9a5b92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RadioMissionEvent
-  activateRelay:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2094879654}
-        m_TargetAssemblyTypeName: MissionActivateTower, Assembly-CSharp
-        m_MethodName: ActivateRelay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  activateRadio:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2094879654}
-        m_TargetAssemblyTypeName: MissionActivateTower, Assembly-CSharp
-        m_MethodName: ActivateRadio
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2112777778
 GameObject:
   m_ObjectHideFlags: 0
@@ -77169,6 +77230,34 @@ PrefabInstance:
     - target: {fileID: 703908641232949633, guid: 0ee254745349a51469a1137084cdb654, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 541711197}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClearSecretArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MissionSecretArea, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+      propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6100238065483895099, guid: 0ee254745349a51469a1137084cdb654, type: 3}
       propertyPath: m_ChunkCullingBounds.y

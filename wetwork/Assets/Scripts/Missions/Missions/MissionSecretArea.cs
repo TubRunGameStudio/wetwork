@@ -3,16 +3,9 @@ using UnityEngine;
 
 public class MissionSecretArea : Mission
 {
-    [SerializeField] GameObject fogOfWar;
-
-    // Update is called once per frame
-    void Update()
+    public void ClearSecretArea()
     {
-        if (!manager.IsMissionActive(missionID))
-            return;
-
-        if (fogOfWar.IsDestroyed())
-            CompleteMission();
+        CompleteMission();
     }
 
     override public string GetMissionText()

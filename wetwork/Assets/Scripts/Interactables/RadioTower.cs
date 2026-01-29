@@ -1,12 +1,17 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem.XR;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class RadioTowerRelayEvent : UnityEvent<int> { }
 
 public class RadioTower : MonoBehaviour
 {
     [SerializeField] RadioRelay[] relays;
     [SerializeField] Animator animator;
     [SerializeField] GameObject range;
+    public RadioTowerRelayEvent activateRelayEvent;
+    public UnityEvent activateRadioEvent;
     private GameController controller;
     public const float RANGE = 20f;
     bool allActive = false;
@@ -25,18 +30,24 @@ public class RadioTower : MonoBehaviour
         foreach (RadioRelay relay in relays)
         {
             if (relay.active)
+            {
                 numActive++;
+            }
             else
                 allActive = false;
         }
 
         if (numActive > 0)
+        {
             animator.SetBool("anyActive", true);
+            activateRelayEvent.Invoke(numActive);
+        }
 
-        if (allActive)
+            if (allActive)
         {
             animator.SetBool("allActive", true);
             range.SetActive(true);
+            activateRadioEvent.Invoke();
             foreach (RadioRelay relay in relays)
             {
                 relay.AllActive();

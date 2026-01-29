@@ -9,9 +9,9 @@ public class MissionActivateTower : Mission
         return $"Active 3 radio relays to power up the radio tower and sync your minimap.  Completed {active} total.";
     }
 
-    public void ActivateRelay()
+    public void ActivateRelay(int numActive)
     {
-        active++;
+        active = numActive;
         manager.RefreshText();
     }
 
