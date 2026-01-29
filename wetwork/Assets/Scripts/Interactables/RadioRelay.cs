@@ -12,6 +12,7 @@ public class RadioRelay : MonoBehaviour, Interactable
     private PlayerController player;
     private bool inRange;
     public bool active;
+    private bool firstUpdate = false;
 
     void Start()
     {
@@ -25,14 +26,17 @@ public class RadioRelay : MonoBehaviour, Interactable
         player = controller.PLAYER;
 
         active = SceneState.GetRelay(SceneState.GetFullPathName(gameObject));
-        if(active)
-        {
-            animator.SetBool("selfActive", true);
-            tower.Refresh();
-        }
+
     }
     private void Update()
     {
+        if (active && !firstUpdate)
+        {
+            animator.SetBool("selfActive", true);
+            tower.Refresh();
+            firstUpdate = true;
+        }
+
         if (inRange)
             tooltip.transform.position = Camera.main.WorldToScreenPoint(transform.position);
     }

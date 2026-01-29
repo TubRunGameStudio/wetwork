@@ -43,8 +43,6 @@ public class PlayerController : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         rb = GetComponent<Rigidbody2D>();
-
-
     }
 
     void OnMove(InputValue movementValue)

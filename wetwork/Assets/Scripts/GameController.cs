@@ -5,6 +5,7 @@ using NUnit.Framework;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class GameController : MonoBehaviour
 {
@@ -23,7 +24,14 @@ public class GameController : MonoBehaviour
     public GameObject player;
     public GameObject playerPrefab;
 
+    [SerializeField] public TextMeshProUGUI MISSION_TEXT;
+    public MissionManager MISSION_MANAGER;
+    public GameObject missionManagerPrefab;
+
     private bool menu = false;
+    private bool initCCTVs = false;
+    private bool initMission = false;
+
 
     void Awake()
     {
@@ -37,17 +45,37 @@ public class GameController : MonoBehaviour
             //instantiate the player
             player = Instantiate(playerPrefab);
         }
+        if (MissionManager.MANAGER != null)
+            MISSION_MANAGER = MissionManager.MANAGER;
+        else
+            MISSION_MANAGER = Instantiate(missionManagerPrefab).GetComponent<MissionManager>();
+
         player.transform.position = PlayerState.PlayerLoadPosition;
         PlayerState.PlayerLoadPosition = PlayerState.PlayerReturnPosition;
         PLAYER = player.GetComponent<PlayerController>();
         PLAYER.Initiate(this);
         RETICULE = PLAYER.reticule;
 
-        InitiateCCTVs();
-
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         mainCamera.SetPlayer(player);
     }
+
+    private void Update()
+    {
+        if(!initCCTVs)
+        {
+            InitiateCCTVs();
+            initCCTVs = true;
+        }
+        if (!initMission)
+        {
+            MISSION_MANAGER.RefreshMissionList();
+            MISSION_MANAGER.RefreshText();
+            initMission = true;
+        }
+            
+    }
+
     public void EndGame()
     {
         Time.timeScale = 0;

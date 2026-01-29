@@ -5,7 +5,8 @@ public class MissionSecretArea : Mission
 {
     public void ClearSecretArea()
     {
-        CompleteMission();
+        if(manager.IsMissionActive((missionID)))
+            CompleteMission();
     }
 
     override public string GetMissionText()

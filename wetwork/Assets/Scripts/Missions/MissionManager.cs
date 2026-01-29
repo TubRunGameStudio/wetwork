@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem.XR;
 
 
 // Define event for mission completion
@@ -15,10 +16,10 @@ public class MissionCompletedEventArgs : EventArgs
     }
 }
 
-
 public class MissionManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI missionText;
+    public static MissionManager MANAGER { get; private set; }
+
     // Event for mission completion
     public static event EventHandler<MissionCompletedEventArgs> MissionCompleted;
 
@@ -26,28 +27,34 @@ public class MissionManager : MonoBehaviour
     private Dictionary<string, MissionState> missionStates = new Dictionary<string, MissionState>();
     private List<Mission> missions = new();
     private int missionIndex = 0;
+    private TextMeshProUGUI missionText;
+    private GameController controller;
 
     private Mission current;
 
-    private void Start()
+    private void Awake()
     {
-        missions.AddRange(GetComponentsInChildren<Mission>());
-        foreach (Mission mission in missions)
-            missionStates[mission.missionID] = MissionState.Inactive;
+        if (MANAGER != null && MANAGER != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            MANAGER = this;
 
-        current = missions[0];
-    }
+            foreach (Mission mission in missions)
+                missionStates[mission.missionID] = MissionState.Inactive;
 
-    private void Update()
-    {
-        if (missionStates[current.missionID] == MissionState.Inactive)
-            current.StartMission();
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     // Start a mission
     public void StartMission(Mission mission)
     {
+        Initialize();
         current = mission;
+        current.StartMission();
         missionStates[current.missionID] = MissionState.Active;
         Debug.Log($"Mission started: {current.missionID}");
         missionText.text = current.GetMissionText();
@@ -56,9 +63,38 @@ public class MissionManager : MonoBehaviour
         // You can hook into this event to handle mission specific initialization, like showing UI or starting dialogue
     }
 
+    public void RefreshMissionList()
+    {
+        GameObject missionList = GameObject.FindGameObjectWithTag("MissionList");
+        if (missionList == null)
+            return;
+
+        missions = new List<Mission>();
+        missions.AddRange(missionList.GetComponentsInChildren<Mission>());
+        for (int i = 0; i < missions.Count; i++)
+        {
+            if (IsMissionCompleted(missions[i].missionID))
+                continue;
+
+            current = missions[i];
+            if (!IsMissionActive(current.missionID))
+                StartMission(current);
+            break;
+        }
+    }
+
     public void RefreshText()
     {
+        Initialize();
         missionText.text = current.GetMissionText();
+    }
+
+    private void Initialize()
+    {
+        if (controller == null)
+            controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        if (missionText == null)
+            missionText = controller.MISSION_TEXT;
     }
 
     public void CompleteMission(Mission mission)
@@ -67,7 +103,7 @@ public class MissionManager : MonoBehaviour
         Debug.Log($"Mission completed: {mission.missionID}");
         missionIndex++;
         if (missions.Count > missionIndex)
-            missions[missionIndex].StartMission();
+             StartMission(missions[missionIndex]);
         else
             missionText.text = string.Empty;
 

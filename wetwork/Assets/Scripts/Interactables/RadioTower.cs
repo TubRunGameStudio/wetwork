@@ -43,7 +43,7 @@ public class RadioTower : MonoBehaviour
             activateRelayEvent.Invoke(numActive);
         }
 
-            if (allActive)
+        if (allActive)
         {
             animator.SetBool("allActive", true);
             range.SetActive(true);

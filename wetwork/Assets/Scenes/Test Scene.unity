@@ -342,6 +342,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &186014187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186014188}
+  - component: {fileID: 186014189}
+  m_Layer: 0
+  m_Name: Mission 0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &186014188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186014187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.301632, y: -5.44889, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1128538567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186014189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186014187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff8e5bea41fe4a46ac54a11a9b86118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionActivateTower
+  missionID: 0
 --- !u!1001 &221251984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7334,51 +7379,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6950558116694001254, guid: 052123858ec09c5439b6c3df02f5a84b, type: 3}
   m_PrefabInstance: {fileID: 221251984}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &541711195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 541711196}
-  - component: {fileID: 541711197}
-  m_Layer: 0
-  m_Name: Mission 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &541711196
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541711195}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1942085785}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &541711197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541711195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 085ae33bcfe4bd847b208c38794735fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MissionSecretArea
-  missionID: 1
 --- !u!1 &542317383
 GameObject:
   m_ObjectHideFlags: 0
@@ -7423,6 +7423,9 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   player: {fileID: 0}
   playerPrefab: {fileID: 3046576089651197680, guid: d243c8125f1adaa44bcef0af59cfffc5, type: 3}
+  MISSION_TEXT: {fileID: 1553304944}
+  MISSION_MANAGER: {fileID: 0}
+  missionManagerPrefab: {fileID: 408950576252551795, guid: c1fb82be4b5365143838e0815516b6f9, type: 3}
 --- !u!4 &542317385
 Transform:
   m_ObjectHideFlags: 0
@@ -7841,6 +7844,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8793066428494765850, guid: 733dd52b6461a094192bc883ab58d9f6, type: 3}
   m_PrefabInstance: {fileID: 978550166}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &993999917
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993999918}
+  - component: {fileID: 993999919}
+  m_Layer: 0
+  m_Name: Mission 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &993999918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993999917}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.301632, y: -5.44889, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1128538567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &993999919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993999917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085ae33bcfe4bd847b208c38794735fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionSecretArea
+  missionID: 1
 --- !u!1 &994646776
 GameObject:
   m_ObjectHideFlags: 0
@@ -8142,6 +8190,39 @@ MonoBehaviour:
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: 3cb735a6554ea224cbe0f9eed5b78297, type: 2}
+--- !u!1 &1128538566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128538567}
+  m_Layer: 0
+  m_Name: Missions
+  m_TagString: MissionList
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1128538567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128538566}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.99561, y: 11.41679, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 186014188}
+  - {fileID: 993999918}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197617826
 GameObject:
   m_ObjectHideFlags: 0
@@ -75913,53 +75994,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902308556}
   m_CullTransparentMesh: 1
---- !u!1 &1942085783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1942085785}
-  - component: {fileID: 1942085784}
-  m_Layer: 0
-  m_Name: MissionManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1942085784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942085783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8f9568eaa66a349930ec66a0e6950b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MissionManager
-  missionText: {fileID: 1553304944}
---- !u!4 &1942085785
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1942085783}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.29724, y: 5.9679, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2094879653}
-  - {fileID: 541711196}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955057622
 GameObject:
   m_ObjectHideFlags: 0
@@ -76638,51 +76672,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2094879652
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2094879653}
-  - component: {fileID: 2094879654}
-  m_Layer: 0
-  m_Name: Mission 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2094879653
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094879652}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1942085785}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2094879654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2094879652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff8e5bea41fe4a46ac54a11a9b86118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MissionActivateTower
-  missionID: 0
 --- !u!4 &2099112276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6950558116694001254, guid: 052123858ec09c5439b6c3df02f5a84b, type: 3}
@@ -76811,11 +76800,11 @@ PrefabInstance:
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2094879654}
+      objectReference: {fileID: 0}
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRelay.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2094879654}
+      objectReference: {fileID: 0}
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRadio.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -76843,11 +76832,11 @@ PrefabInstance:
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2094879654}
+      objectReference: {fileID: 186014189}
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRelayEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2094879654}
+      objectReference: {fileID: 186014189}
     - target: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       propertyPath: activateRadioEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -77242,7 +77231,7 @@ PrefabInstance:
     - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
       propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 541711197}
+      objectReference: {fileID: 993999919}
     - target: {fileID: 2397740468582787600, guid: 0ee254745349a51469a1137084cdb654, type: 3}
       propertyPath: revealFogEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -78205,4 +78194,4 @@ SceneRoots:
   - {fileID: 1748206564}
   - {fileID: 1493653977}
   - {fileID: 2104589537}
-  - {fileID: 1942085785}
+  - {fileID: 1128538567}
