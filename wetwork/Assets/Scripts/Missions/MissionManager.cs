@@ -24,13 +24,18 @@ public class MissionManager : MonoBehaviour
 
     // Dictionary to store mission states
     private Dictionary<string, MissionState> missionStates = new Dictionary<string, MissionState>();
+    private List<Mission> missions = new();
+    private int missionIndex = 0;
 
     private Mission current;
 
     private void Start()
     {
-        current = GetComponentInChildren<Mission>();
-        missionStates[current.missionID] = MissionState.Inactive;
+        missions.AddRange(GetComponentsInChildren<Mission>());
+        foreach (Mission mission in missions)
+            missionStates[mission.missionID] = MissionState.Inactive;
+
+        current = missions[0];
     }
 
     private void Update()
@@ -59,6 +64,11 @@ public class MissionManager : MonoBehaviour
     {
         missionStates[missionID] = MissionState.Completed;
         Debug.Log($"Mission completed: {missionID}");
+        missionIndex++;
+        if (missions.Count > missionIndex)
+            missions[missionIndex].StartMission();
+        else
+            missionText.text = string.Empty;
 
         // Trigger mission completed event
         OnMissionCompleted(missionID);
