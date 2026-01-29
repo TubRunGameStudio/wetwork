@@ -25,9 +25,6 @@ public class MissionManager : MonoBehaviour
     // Dictionary to store mission states
     private Dictionary<string, MissionState> missionStates = new Dictionary<string, MissionState>();
 
-    // Dictionary to store mission checkpoints
-    private Dictionary<string, int> missionCheckpoints = new Dictionary<string, int>();
-
     private Mission current;
 
     private void Start()
@@ -46,7 +43,6 @@ public class MissionManager : MonoBehaviour
     public void StartMission(string missionID)
     {
         missionStates[missionID] = MissionState.Active;
-        missionCheckpoints[missionID] = 0; // Initialize checkpoint
         Debug.Log($"Mission started: {missionID}");
         missionText.text = current.GetMissionText();
 
@@ -86,19 +82,5 @@ public class MissionManager : MonoBehaviour
         {
             handler(this, new MissionCompletedEventArgs(missionID));
         }
-    }
-
-    // Save mission checkpoint
-    public void SaveMissionCheckpoint(string missionID, int checkpoint)
-    {
-        if(missionCheckpoints.ContainsKey(missionID))
-        {
-            missionCheckpoints[missionID] = checkpoint;
-        }
-    }
-    // Load mission checkpoint
-    public int LoadMissionCheckpoint(string missionID)
-    {
-        return missionCheckpoints.ContainsKey(missionID) ? missionCheckpoints[missionID] : 0;
     }
 }
