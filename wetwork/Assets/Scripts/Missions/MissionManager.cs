@@ -26,10 +26,18 @@ public class MissionManager : MonoBehaviour
     // Dictionary to store mission checkpoints
     private Dictionary<string, int> missionCheckpoints = new Dictionary<string, int>();
 
+    private Mission current;
+
     private void Start()
     {
-        Mission mission0 = GetComponentInChildren<Mission>();
-        mission0.StartMission();
+        current = GetComponentInChildren<Mission>();
+        missionStates[current.missionID] = MissionState.Inactive;
+    }
+
+    private void Update()
+    {
+        if (missionStates[current.missionID] == MissionState.Inactive)
+            current.StartMission();
     }
 
     // Start a mission

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public abstract class Mission : MonoBehaviour
 {
-    [SerializeField] protected string missionID;
+    [SerializeField] public string missionID;
     protected MissionManager manager;
 
     private void Start()
