@@ -14,12 +14,12 @@ public abstract class Mission : MonoBehaviour
     }
     public void StartMission()
     {
-        manager.StartMission(missionID);
+        manager.StartMission(this);
     }
 
     protected void CompleteMission()
     {
-        manager.CompleteMission(missionID);
+        manager.CompleteMission(this);
     }
 
     public abstract string GetMissionText();

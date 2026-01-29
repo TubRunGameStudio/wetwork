@@ -45,10 +45,11 @@ public class MissionManager : MonoBehaviour
     }
 
     // Start a mission
-    public void StartMission(string missionID)
+    public void StartMission(Mission mission)
     {
-        missionStates[missionID] = MissionState.Active;
-        Debug.Log($"Mission started: {missionID}");
+        current = mission;
+        missionStates[current.missionID] = MissionState.Active;
+        Debug.Log($"Mission started: {current.missionID}");
         missionText.text = current.GetMissionText();
 
         // Trigger mission started event
@@ -60,10 +61,10 @@ public class MissionManager : MonoBehaviour
         missionText.text = current.GetMissionText();
     }
 
-    public void CompleteMission(string missionID)
+    public void CompleteMission(Mission mission)
     {
-        missionStates[missionID] = MissionState.Completed;
-        Debug.Log($"Mission completed: {missionID}");
+        missionStates[mission.missionID] = MissionState.Completed;
+        Debug.Log($"Mission completed: {mission.missionID}");
         missionIndex++;
         if (missions.Count > missionIndex)
             missions[missionIndex].StartMission();
@@ -71,7 +72,7 @@ public class MissionManager : MonoBehaviour
             missionText.text = string.Empty;
 
         // Trigger mission completed event
-        OnMissionCompleted(missionID);
+        OnMissionCompleted(mission.missionID);
     }
 
     public bool IsMissionActive(string missionID)

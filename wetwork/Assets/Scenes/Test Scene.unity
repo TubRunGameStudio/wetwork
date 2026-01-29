@@ -7334,6 +7334,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6950558116694001254, guid: 052123858ec09c5439b6c3df02f5a84b, type: 3}
   m_PrefabInstance: {fileID: 221251984}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &541711195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541711196}
+  - component: {fileID: 541711197}
+  m_Layer: 0
+  m_Name: Mission 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &541711196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541711195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1942085785}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541711197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541711195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085ae33bcfe4bd847b208c38794735fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MissionSecretArea
+  missionID: 1
+  fogOfWar: {fileID: 1850716535}
 --- !u!1 &542317383
 GameObject:
   m_ObjectHideFlags: 0
@@ -61726,6 +61772,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5400fe612c9f1a48a4b9573d7d0f724, type: 3}
+--- !u!1 &1850716535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8538052308324933229, guid: 0ee254745349a51469a1137084cdb654, type: 3}
+  m_PrefabInstance: {fileID: 8286811800064140180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850717872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
@@ -75912,6 +75963,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2094879653}
+  - {fileID: 541711196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955057622
