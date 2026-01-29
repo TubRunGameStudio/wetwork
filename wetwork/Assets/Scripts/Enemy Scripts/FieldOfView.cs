@@ -130,6 +130,8 @@ public class FieldOfView : MonoBehaviour
         if (player == null) return;
         GameObject lastKnownLocation = new GameObject();
         lastKnownLocation.transform.position = player.transform.position;
+        lastKnownLocation.transform.SetParent(transform.parent);
+        lastKnownLocation.name = "PlayerLastKnownLocation";
 
         self.SetCaution(lastKnownLocation);
     }
