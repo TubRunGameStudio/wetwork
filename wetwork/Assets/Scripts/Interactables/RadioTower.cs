@@ -53,4 +53,9 @@ public class RadioTower : MonoBehaviour
     {
         return numActive;
     }
+
+    public int NumRelays()
+    {
+        return relays.Length;
+    }
 }

@@ -22,6 +22,8 @@ public abstract class Mission : MonoBehaviour
         manager.CompleteMission(missionID);
     }
 
+    public abstract string GetMissionText();
+
     private class RogueMissionException : System.Exception
     {
         public RogueMissionException()

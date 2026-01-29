@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -17,6 +18,7 @@ public class MissionCompletedEventArgs : EventArgs
 
 public class MissionManager : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI missionText;
     // Event for mission completion
     public static event EventHandler<MissionCompletedEventArgs> MissionCompleted;
 
@@ -46,9 +48,15 @@ public class MissionManager : MonoBehaviour
         missionStates[missionID] = MissionState.Active;
         missionCheckpoints[missionID] = 0; // Initialize checkpoint
         Debug.Log($"Mission started: {missionID}");
+        missionText.text = current.GetMissionText();
 
         // Trigger mission started event
         // You can hook into this event to handle mission specific initialization, like showing UI or starting dialogue
+    }
+
+    public void RefreshText()
+    {
+        missionText.text = current.GetMissionText();
     }
 
     public void CompleteMission(string missionID)
