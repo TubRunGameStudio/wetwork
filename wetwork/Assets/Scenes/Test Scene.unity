@@ -76689,7 +76689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MissionActivateTower
   missionID: 0
-  tower: {fileID: 2104589538}
 --- !u!4 &2099112276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6950558116694001254, guid: 052123858ec09c5439b6c3df02f5a84b, type: 3}
@@ -76806,18 +76805,52 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1850717876}
+    - targetCorrespondingSourceObject: {fileID: 8489333075886239396, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104589540}
   m_SourcePrefab: {fileID: 100100000, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
---- !u!114 &2104589538 stripped
+--- !u!114 &2104589540
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7860343950875050738, guid: e9c24b743712f9a409f53a8f6051380f, type: 3}
-  m_PrefabInstance: {fileID: 2104589537}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1850717872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b2997e5bca4bb4299f06eb59978070, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d44f351962555a4c8202f2b6b9a5b92, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::RadioMissionEvent
+  activateRelay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2094879654}
+        m_TargetAssemblyTypeName: MissionActivateTower, Assembly-CSharp
+        m_MethodName: ActivateRelay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  activateRadio:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2094879654}
+        m_TargetAssemblyTypeName: MissionActivateTower, Assembly-CSharp
+        m_MethodName: ActivateRadio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2112777778
 GameObject:
   m_ObjectHideFlags: 0
