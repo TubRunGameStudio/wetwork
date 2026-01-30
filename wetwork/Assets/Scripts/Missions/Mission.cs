@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using UnityEngine;
 
 public abstract class Mission : MonoBehaviour
@@ -14,16 +15,20 @@ public abstract class Mission : MonoBehaviour
             throw new RogueMissionException($"This mission {missionID} does not belong to a manager");
     }
 
-    public void StartMission()
+    public virtual void StartMission()
     {
         if(manager.IsMissionActive(missionID) || manager.IsMissionCompleted(missionID))
             throw new IllegalMissionException();
+
+        manager.StartMission(missionID);
+        Debug.Log($"Mission started: {missionID}");
     }
 
     protected void CompleteMission()
     {
         if (manager.IsMissionActive(missionID))
         {
+            Debug.Log($"Mission completed: {missionID}");
             manager.CompleteMission(this);
         }
     }

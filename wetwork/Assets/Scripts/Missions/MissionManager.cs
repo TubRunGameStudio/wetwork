@@ -54,10 +54,8 @@ public class MissionManager : MonoBehaviour
     {
         Initialize();
         current = mission;
-        current.StartMission();
-        missionStates[current.missionID] = MissionState.Active;
-        Debug.Log($"Mission started: {current.missionID}");
         missionText.text = current.GetMissionText();
+        current.StartMission();
 
         // Trigger mission started event
         // You can hook into this event to handle mission specific initialization, like showing UI or starting dialogue
@@ -83,6 +81,12 @@ public class MissionManager : MonoBehaviour
         }
     }
 
+    public void StartMission(string missionID)
+    {
+        missionStates[missionID] = MissionState.Active;
+
+    }
+
     public void RefreshText()
     {
         Initialize();
@@ -100,7 +104,6 @@ public class MissionManager : MonoBehaviour
     public void CompleteMission(Mission mission)
     {
         missionStates[mission.missionID] = MissionState.Completed;
-        Debug.Log($"Mission completed: {mission.missionID}");
         missionIndex++;
         if (missions.Count > missionIndex)
              StartMission(missions[missionIndex]);
