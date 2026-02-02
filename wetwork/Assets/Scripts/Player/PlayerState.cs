@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using static PlayerInventory;
 
 public static class PlayerState
 {
@@ -12,10 +13,11 @@ public static class PlayerState
     public static Vector3 PlayerLoadPosition;
     public static Vector3 PlayerReturnPosition;
 
-
+    public static Dictionary<ComponentType, int> components;
 
     public static void InitGame(int maxHealth, List<Weapon> weapons)
     {
+        components = new Dictionary<ComponentType, int>();
         Health = maxHealth;
         Weapons = weapons;
         Weapons.Add(new CCTVWeapon());

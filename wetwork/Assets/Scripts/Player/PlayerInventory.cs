@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
@@ -18,6 +19,8 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] InputActionReference weaponSelect;
     
     public GameController controller;
+    
+    public enum ComponentType { N5, OpticLens, RadioPart, ProximityTrigger};
 
     public void Awake()
     {
@@ -86,6 +89,16 @@ public class PlayerInventory : MonoBehaviour
 
         if(weapon == PlayerState.CurrentWeapon)
             UpdateText(ammo.ToString());
+    }
+
+    public void Pickup(ComponentType component, int amount)
+    {
+        if (PlayerState.components.ContainsKey(component))
+            PlayerState.components[component] += amount;
+        else
+            PlayerState.components.Add(component, amount);
+
+        Debug.Log($"Invectory: {component}: {PlayerState.components[component]}");
     }
 
     private void UpdateText(string txt)
