@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ProximityMine
   m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
   recipeName: Proximity Mine
+  ammo: 2
   image: {fileID: -7205053664297210787, guid: 93172f0066837e9419c8eddeffa8a8a6, type: 3}
   components:
   - {fileID: 11400000, guid: 51ed1b53db3239f4cba1414926bf63fb, type: 2}

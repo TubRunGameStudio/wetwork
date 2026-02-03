@@ -89,6 +89,11 @@ public class PlayerInventory : MonoBehaviour
             UpdateText(ammo.ToString());
     }
 
+    public void Pickup(CraftingRecipe recipe)
+    {
+        Pickup(recipe.ammo.ToString(), 1);
+    }
+
     public void Pickup(ComponentType component, int amount)
     {
         if (PlayerState.components.ContainsKey(component))

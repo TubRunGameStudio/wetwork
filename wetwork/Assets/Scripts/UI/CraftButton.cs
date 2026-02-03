@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class CraftButton : MonoBehaviour
 {
+    [SerializeField] CraftingArea craftingArea;
     public void CraftClick()
     {
-        Debug.Log("Crafted the item");
+        craftingArea.Craft();
     }
 }

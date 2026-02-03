@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Grenade
   m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
   recipeName: Grenade
+  ammo: 1
   image: {fileID: -4404730915955676143, guid: ee3146014f28a78478e594b34e6fb039, type: 3}
   components:
   - {fileID: 11400000, guid: 51ed1b53db3239f4cba1414926bf63fb, type: 2}

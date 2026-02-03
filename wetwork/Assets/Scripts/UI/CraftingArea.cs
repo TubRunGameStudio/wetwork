@@ -14,8 +14,14 @@ public class CraftingArea : MonoBehaviour
     private List<Image> componentsImages;
     private CraftingRecipe recipe;
 
+    private GameController controller;
+    private PlayerInventory inventory;
+
     private void Init()
     {
+        controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        inventory = controller.player.GetComponent<PlayerInventory>();
+
         componentsImages = new List<Image>();
         componentsImages.AddRange(componentsImagesContainer.GetComponentsInChildren<Image>());
     }
@@ -35,10 +41,7 @@ public class CraftingArea : MonoBehaviour
             else
                 componentsImages[i].color = Color.black;
         }
-        if (CanCraft())
-            craftButton.interactable = true;
-        else
-            craftButton.interactable = false;
+        RefreshButton();
     }
 
     private bool CanCraft()
@@ -60,7 +63,37 @@ public class CraftingArea : MonoBehaviour
             if (!PlayerState.components.ContainsKey(pair.Key) ||  PlayerState.components[pair.Key] < pair.Value)
                 canCraft = false;
         }
-        Debug.Log("CanCraft: " + canCraft);
         return canCraft;
+    }
+
+    public void Craft()
+    {
+        Dictionary<ComponentType, int> amounts = new();
+        foreach (ComponentType type in Enum.GetValues(typeof(ComponentType)).Cast<ComponentType>())
+        {
+            amounts.Add(type, 0);
+        }
+
+        foreach (Component component in recipe.components)
+            amounts[component.componentType]++;
+
+        foreach (KeyValuePair<ComponentType, int> pair in amounts)
+        {
+            if (pair.Value == 0)
+                continue;
+
+            PlayerState.components[pair.Key] = PlayerState.components[pair.Key] - pair.Value;
+            
+        }
+        inventory.Pickup(recipe);
+        RefreshButton();
+    }
+
+    private void RefreshButton()
+    {
+        if (CanCraft())
+            craftButton.interactable = true;
+        else
+            craftButton.interactable = false;
     }
 }
