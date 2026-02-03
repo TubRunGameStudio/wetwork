@@ -97,8 +97,14 @@ public class PlayerInventory : MonoBehaviour
             PlayerState.components[component] += amount;
         else
             PlayerState.components.Add(component, amount);
+    }
 
-        Debug.Log($"Invectory: {component}: {PlayerState.components[component]}");
+    public int GetComponentCount(ComponentType component)
+    {
+        if (PlayerState.components.ContainsKey(component))
+            return PlayerState.components[component];
+
+        return 0;
     }
 
     private void UpdateText(string txt)
