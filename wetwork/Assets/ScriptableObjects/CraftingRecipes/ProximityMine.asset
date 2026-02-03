@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c2b6d30926a83498b15906fced613a, type: 3}
+  m_Name: ProximityMine
+  m_EditorClassIdentifier: Assembly-CSharp::CraftingRecipe
+  recipeName: Proximity Mine
+  image: {fileID: -7205053664297210787, guid: 93172f0066837e9419c8eddeffa8a8a6, type: 3}
+  components:
+  - {fileID: 11400000, guid: 51ed1b53db3239f4cba1414926bf63fb, type: 2}
+  - {fileID: 11400000, guid: 9f437aed01fe8144e912f0c266633a0b, type: 2}
