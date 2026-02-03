@@ -20,8 +20,6 @@ public class PlayerInventory : MonoBehaviour
     
     public GameController controller;
     
-    public enum ComponentType { N5, OpticLens, RadioPart, ProximityTrigger};
-
     public void Awake()
     {
         controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
