@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 201991097}
   - component: {fileID: 201991100}
   - component: {fileID: 201991099}
+  - component: {fileID: 201991101}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1110,6 +1111,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201991096}
   m_CullTransparentMesh: 1
+--- !u!114 &201991101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201991096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4b4609d5e2ec94eb2646b4b80b10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDisplay
+  type: GrenadeWeapon
 --- !u!1001 &221251984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7751,6 +7765,7 @@ GameObject:
   - component: {fileID: 291340365}
   - component: {fileID: 291340368}
   - component: {fileID: 291340367}
+  - component: {fileID: 291340369}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7876,6 +7891,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291340364}
   m_CullTransparentMesh: 1
+--- !u!114 &291340369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291340364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4b4609d5e2ec94eb2646b4b80b10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDisplay
+  type: ProximityMineWeapon
 --- !u!1 &307502203
 GameObject:
   m_ObjectHideFlags: 0
@@ -64792,6 +64820,7 @@ GameObject:
   - component: {fileID: 1765685374}
   - component: {fileID: 1765685377}
   - component: {fileID: 1765685376}
+  - component: {fileID: 1765685378}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -64917,6 +64946,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765685373}
   m_CullTransparentMesh: 1
+--- !u!114 &1765685378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765685373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae4b4609d5e2ec94eb2646b4b80b10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  type: CCTVWeapon
 --- !u!1 &1770711564
 GameObject:
   m_ObjectHideFlags: 0
@@ -79927,7 +79969,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2018767503
 RectTransform:
   m_ObjectHideFlags: 0
