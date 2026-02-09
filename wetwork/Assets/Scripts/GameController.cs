@@ -9,6 +9,7 @@ using Unity.VisualScripting;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] public DialogueWindow DIALOGUE_WINDDOW;
     [SerializeField] public PlayerHealthBar HEALTH_BAR;
     [SerializeField] public TextMeshProUGUI AMMO_TXT;
     [SerializeField] public Image WEAPON_IMAGE;

@@ -1,10 +1,13 @@
 using System;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public abstract class Mission : MonoBehaviour
 {
     [SerializeField] public string missionID;
+    public UnityEvent missionCompleteEvent;
     protected MissionManager manager;
     protected bool init = false;
 
@@ -30,6 +33,7 @@ public abstract class Mission : MonoBehaviour
         {
             Debug.Log($"Mission completed: {missionID}");
             manager.CompleteMission(this);
+            missionCompleteEvent.Invoke();
         }
     }
 
