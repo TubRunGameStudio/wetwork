@@ -1,38 +1,43 @@
-using NUnit.Framework.Internal.Commands;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class DialogueWindow : MonoBehaviour
 {
-    public string[] lines;
     public float textSpeed;
+    public TextAsset linesJson;
     private TextMeshProUGUI text;
-    int index;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
         text.text = string.Empty;
-        StartDialogue();
+        Dialogue lines = JsonUtility.FromJson<Dialogue>(linesJson.text);
+        List<string> collapsedLines = new();
+        foreach (string line in lines.lines)
+            collapsedLines.Add(line);
+        StartCoroutine(StartDialogue(collapsedLines));
     }
 
-
-    void StartDialogue()
+    private IEnumerator StartDialogue(List<string> lines)
     {
-        index = 0;
-        StartCoroutine(TypeLine());
+        foreach(string line in lines)
+            yield return StartCoroutine(TypeLine(line));
+        text.text = string.Empty;
     }
 
-    IEnumerator TypeLine()
+    private IEnumerator TypeLine(string line)
     {
-        foreach(char c in lines[index].ToCharArray())
+        text.text = string.Empty;
+        foreach(char c in line.ToCharArray())
         {
             text.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
+        yield return new WaitForSeconds(1);
     }
+
 }

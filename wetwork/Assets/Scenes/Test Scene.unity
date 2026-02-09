@@ -12589,10 +12589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18de6ed70d62b62459315a4341726779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  lines:
-  - This is the first line of the text
-  - The second line is even better!
   textSpeed: 0.1
+  linesJson: {fileID: 4900000, guid: 634a5687a4b3c2e459d6a6177beb0d6e, type: 3}
 --- !u!1 &1493653976
 GameObject:
   m_ObjectHideFlags: 0
