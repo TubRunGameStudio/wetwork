@@ -20,8 +20,8 @@ public class DialogueWindow : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         List<string> collapsedLines = new();
-        foreach (string line in dialogue.lines)
-            collapsedLines.Add(line);
+        foreach (Line line in dialogue.lines)
+            collapsedLines.Add(line.line);
         StartCoroutine(StartDialogue(collapsedLines));
     }
 

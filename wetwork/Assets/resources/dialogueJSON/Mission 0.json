@@ -1,8 +1,16 @@
 {
-	"banger": "ROFL",
 	"lines": [
-			"Nestor?... Can you hear me Nestor?...",
-			"Yeah, it's me.  Bolsa, is that you?  What are you doing here?",
-			"Yes, glad to hear your voice amigo.  I'll explain later, here let me pass you back to Director."
+			{
+				"character": "Bolsa",
+				"line": "Nestor?... Can you hear me Nestor?..."
+			},
+			{
+				"character": "Nestor",
+				"line": "Yeah, i'm here.  Bolsa, is that you?  What are you doing here?"
+			},
+			{
+				"character": "Bolsa",
+				"line": "Yes, glad to hear your voice amigo.  I'll explain later, here let me pass you back to Director."
+			}
 	]
 }

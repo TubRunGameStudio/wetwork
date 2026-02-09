@@ -1,14 +1,18 @@
 using NUnit.Framework;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
+[System.Serializable]
+public class Line
+{
+    public string character;
+    public string line;
+}
 
+[System.Serializable]
 public class Dialogue
 {
-    public string banger;
-    public string[] lines;
-    public class Line
-    {
-        public string character;
-        public string line;
-    }
+    public List<Line> lines;
+
 }

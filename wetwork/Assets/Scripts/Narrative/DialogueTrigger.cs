@@ -11,7 +11,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         GameController controller = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         window = controller.DIALOGUE_WINDDOW;
-
     }
 
     public void StartDialogue()
