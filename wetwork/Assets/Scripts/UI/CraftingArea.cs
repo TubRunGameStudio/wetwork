@@ -3,14 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using static PlayerInventory;
+
+[System.Serializable]
+public class SetRecipeEvent : UnityEvent<CraftingRecipe> { }
 
 public class CraftingArea : MonoBehaviour
 {
     [SerializeField] private Image craftImage;
     [SerializeField] private Button craftButton;
     [SerializeField] private GameObject componentsImagesContainer;
+    public SetRecipeEvent changeRecipeEvent;
     private List<Image> componentsImages;
     private CraftingRecipe recipe;
 
@@ -42,6 +47,7 @@ public class CraftingArea : MonoBehaviour
                 componentsImages[i].color = Color.black;
         }
         RefreshButton();
+        changeRecipeEvent.Invoke(recipe);
     }
 
     private bool CanCraft()
