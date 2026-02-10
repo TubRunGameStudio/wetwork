@@ -38,7 +38,10 @@ public class DialogueWindow : MonoBehaviour
         foreach(char c in line.ToCharArray())
         {
             text.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            if(char.IsWhiteSpace(c))
+                yield return new WaitForSeconds(textSpeed);
+            else
+                yield return new WaitForSeconds(textSpeed/2);
         }
         yield return new WaitForSeconds(1);
     }
