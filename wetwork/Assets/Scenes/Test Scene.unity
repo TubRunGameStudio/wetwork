@@ -8193,12 +8193,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1466150189}
+  - {fileID: 557711053}
   m_Father: {fileID: 169155997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.914978, y: 350.26004}
-  m_SizeDelta: {x: -649.83, y: -700.5201}
+  m_AnchoredPosition: {x: 44.94287, y: 350.26004}
+  m_SizeDelta: {x: -779.5458, y: -700.5201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &315719067
 MonoBehaviour:
@@ -9559,6 +9560,96 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1 &557711052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557711053}
+  - component: {fileID: 557711056}
+  - component: {fileID: 557711055}
+  - component: {fileID: 557711054}
+  m_Layer: 5
+  m_Name: Portrait
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &557711053
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557711052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 315719066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -412.9, y: -2.4983}
+  m_SizeDelta: {x: 128, y: 128.15}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &557711054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557711052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eadc057841296440bebea2199d3ade6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  bolsa: {fileID: 2044902570281329109, guid: e292c0190183dcc4b8f75a68725a1509, type: 3}
+  nestor: {fileID: 5752557952555423748, guid: 40a88d8382ccbca4b80ecfc118438f66, type: 3}
+--- !u!114 &557711055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557711052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &557711056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557711052}
+  m_CullTransparentMesh: 1
 --- !u!4 &579659394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6950558116694001254, guid: 455520efadd36fe468eaf7acdc764ae0, type: 3}
@@ -12508,8 +12599,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: -5}
-  m_SizeDelta: {x: 832.17, y: 133.15}
+  m_AnchoredPosition: {x: 6.3677, y: -5}
+  m_SizeDelta: {x: 700.9067, y: 133.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466150190
 MonoBehaviour:
@@ -12622,6 +12713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18de6ed70d62b62459315a4341726779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  image: {fileID: 557711055}
   textSpeed: 0.08
 --- !u!1 &1493653976
 GameObject:

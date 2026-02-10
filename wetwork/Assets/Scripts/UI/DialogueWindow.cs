@@ -3,33 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using static Dialogue;
 
 public class DialogueWindow : MonoBehaviour
 {
-    public float textSpeed;
+    [SerializeField] private Image image;
+    [SerializeField] private float textSpeed;
+    private Portait portraits;
     private TextMeshProUGUI text;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        text.text = string.Empty;        
+        text.text = string.Empty;
+        portraits = image.gameObject.GetComponent<Portait>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        List<string> collapsedLines = new();
-        foreach (Line line in dialogue.lines)
-            collapsedLines.Add(line.line);
-        StartCoroutine(StartDialogue(collapsedLines));
+        StartCoroutine(ExecuteDialogue(dialogue));
     }
 
-    private IEnumerator StartDialogue(List<string> lines)
+    private IEnumerator ExecuteDialogue(Dialogue dialogue)
     {
-        foreach(string line in lines)
-            yield return StartCoroutine(TypeLine(line));
-        text.text = string.Empty;
+        foreach (Line line in dialogue.lines)
+        {
+            image.gameObject.SetActive(true);
+            image.sprite = portraits.portraits.ContainsKey(line.character) ? portraits.portraits[line.character] : throw new Exception($"No sprite found for portrait {line.character}");
+            yield return StartCoroutine(TypeLine(line.line));
+            text.text = string.Empty;
+            image.gameObject.SetActive(false);
+        }
     }
 
     private IEnumerator TypeLine(string line)
